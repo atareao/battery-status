@@ -1,0 +1,10 @@
+{
+    "name": "Battery Status",
+    "description": "Get information about your battery status",
+    "shell-version": ["3.36"],
+    "url": "https://github.com/atareao/battery-status", 
+    "uuid": "battery-status@atareao.es",
+    "gettext-domain": "battery-status@atareao.es", 
+    "settings-schema": "es.atareao.battery-status",
+    "version": 1
+}

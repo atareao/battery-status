@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="battery-status@atareao.es">
+    <schema path="/es/atareao/battery-status/" id="es.atareao.battery-status">
+        <key name="path" type="s" >
+            <default>"/sys/class/power_supply/BAT0/"</default>
+            <summary>Power supply path</summary>
+            <description>Path of the power supply</description>
+        </key>
+        <key name="checktime" type="i" >
+            <default>60</default>
+            <summary>Check time</summary>
+            <description>Set the check time to test the battery status</description>
+        </key>
+        <key name="darktheme" type="b">
+            <default>false</default>
+            <summary>Dark theme</summary>
+            <description>Enable dark theme otherwise light theme</description>
+        </key>
+    </schema>
+</schemalist>
