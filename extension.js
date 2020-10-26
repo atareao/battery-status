@@ -293,19 +293,30 @@ var BatteryStatus = GObject.registerClass(
                             }
                             if(power_supply_current_now != null && power_supply_charge_now != null){
                                 let currentNow = parseFloat(power_supply_current_now) / 1000.0;
-                                let chargeNow = parseFloat(power_supply_charge_now) / 1000.0;
-                                let timeleft = chargeNow / currentNow
-                                let hours = parseInt(timeleft);
-                                let minutes = parseInt((timeleft - hours)*60);
-                                if(minutes >= 60){
-                                    hours = hours + 1;
-                                    minutes = 0;
+                                if(parseInt(currentNow) > 1){
+                                    let chargeNow = parseFloat(power_supply_charge_now) / 1000.0;
+                                    log(currentNow.toString());
+                                    log(chargeNow.toString());
+                                    let timeleft = chargeNow / currentNow
+                                    log(timeleft.toString());
+                                    let hours = parseInt(timeleft);
+                                    let minutes = parseInt((timeleft - hours)*60);
+                                    if(minutes >= 60){
+                                        hours = hours + 1;
+                                        minutes = 0;
+                                    }
+                                    hours = hours.toString();
+                                    if(hours.length < 2){
+                                        hours = '0'.repeat(2 - hours.length) + hours;
+                                    }
+                                    minutes = minutes.toString();
+                                    if(minutes.length <  2){
+                                        minutes = '0'.repeat(2 - minutes.length) + minutes;
+                                    }
+                                    this._timeLeft.set_text(hours + ':' + minutes);
+                                }else{
+                                    this._timeLeft.set_text('');
                                 }
-                                hours = hours.toString();
-                                hours = '0'.repeat(2 - hours.length) + hours;
-                                minutes = minutes.toString();
-                                minutes = '0'.repeat(2 - minutes.length) + minutes;
-                                this._timeLeft.set_text(hours + ':' + minutes);
                             }
                             log('====== Battery ======');
                         }catch(e){
