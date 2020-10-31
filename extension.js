@@ -251,8 +251,6 @@ var BatteryStatus = GObject.registerClass(
                             res = source_object.load_contents_finish(res);
                             let [ok, contents, etag_out] = res;
                             contents = String.fromCharCode.apply(null, contents);
-                            log('================= battery =================');
-                            log(contents)
                             let discharging = contents.match(/POWER_SUPPLY_STATUS=Discharging/);
                             let power_supply_voltage_min_design = contents.match(/POWER_SUPPLY_VOLTAGE_MIN_DESIGN=\d*/);
                             if(power_supply_voltage_min_design != null){
@@ -282,15 +280,6 @@ var BatteryStatus = GObject.registerClass(
                             if(power_supply_capacity != null){
                                 power_supply_capacity = power_supply_capacity.toString().substring(22);
                             }
-                            log(power_supply_voltage_min_design);
-                            log(power_supply_voltage_now);
-                            log(power_supply_current_now);
-                            log(power_supply_charge_full_design);
-                            log(power_supply_charge_full);
-                            log(power_supply_charge_now);
-                            log(power_supply_capacity);
-
-                            log('================= battery =================');
                             this._set_icon_indicator(discharging != null);
                             let voltageDesign = parseFloat(power_supply_voltage_min_design) / 1000 / 1000;
                             this._originalVoltage.set_text(voltageDesign.toString() + ' ' + _('V'));
@@ -313,14 +302,12 @@ var BatteryStatus = GObject.registerClass(
                                 let originalMax = parseFloat(power_supply_charge_full_design) / 1000;
                                 this._batteryHealthPie.setPercentage(Math.round(currentMax / originalMax * 100));
                                 this._batteryHealthPie.redraw()
-                                log(Math.round(currentMax / originalMax * 100));
                             }
                             if(power_supply_charge_full != null && power_supply_charge_now != null){
                                 let currentMax = parseFloat(power_supply_charge_full) / 1000.0;
                                 let currentCharge = parseFloat(power_supply_charge_now) / 1000.0;
                                 this._currentChargePie.setPercentage(Math.round(currentCharge / currentMax * 100));
                                 this._currentChargePie.redraw()
-                                log(Math.round(currentCharge / currentMax * 100));
                             }
                             if(power_supply_charge_full_design != null && power_supply_charge_now != null){
                                 let currentMax = parseFloat(power_supply_charge_full_design) / 1000.0;
@@ -332,10 +319,7 @@ var BatteryStatus = GObject.registerClass(
                                 let currentNow = parseFloat(power_supply_current_now) / 1000.0;
                                 if(parseInt(currentNow) > 1){
                                     let chargeNow = parseFloat(power_supply_charge_now) / 1000.0;
-                                    log(currentNow.toString());
-                                    log(chargeNow.toString());
                                     let timeleft = chargeNow / currentNow
-                                    log(timeleft.toString());
                                     let hours = parseInt(timeleft);
                                     let minutes = parseInt((timeleft - hours)*60);
                                     if(minutes >= 60){
@@ -355,7 +339,6 @@ var BatteryStatus = GObject.registerClass(
                                     this._timeLeft.set_text('');
                                 }
                             }
-                            log('====== Battery ======');
                         }catch(e){
                             logError(e);
                         }
@@ -431,7 +414,6 @@ var BatteryStatus = GObject.registerClass(
             return menu_help;
         }
         _settingsChanged(){
-            log('==== Settings Changed ====');
             this._loadPreferences();
 
             this._batteryHealthPie.setNormalColor(this._normalColor);
@@ -463,7 +445,12 @@ var BatteryStatus = GObject.registerClass(
             this._sourceId = GLib.timeout_add_seconds(
                 GLib.PRIORITY_DEFAULT, this._checktime,
                 this._update.bind(this));
-            log(this._sourceId);
+        }
+
+        disableUpdate(){
+            if(this._sourceId > 0){
+                GLib.source_remove(this._sourceId);
+            }
         }
     }
 );
@@ -480,5 +467,6 @@ function enable(){
 }
 
 function disable() {
+    batteryStatus.disableUpdate();
     batteryStatus.destroy();
 }

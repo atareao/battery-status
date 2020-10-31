@@ -44,7 +44,7 @@ function init() {
 
 var AboutWidget = GObject.registerClass(
     {
-        GTypeName: Extension.uuid + '.AboutWidget'
+        GTypeName: (Extension.uuid + '.AboutWidget').replace(/[\W_]+/g, '_')
     },
     class AboutWidget extends Gtk.Grid{
         _init(){
@@ -181,7 +181,6 @@ function buildPrefsWidget() {
         prefsWindow.resize(width, 650);
         center(prefsWindow);
         let icon = Extension.path + '/icons/battery-status-icon.svg';
-        log(icon);
         prefsWindow.set_icon_from_file(icon);
         return false;
     });

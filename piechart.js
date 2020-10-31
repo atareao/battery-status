@@ -103,13 +103,10 @@ var PieChart = GObject.registerClass(
             cr.save();
             cr.setLineWidth(linew);
             if(this._percentage < this._danger){
-                log(this._dangerColor);
                 Clutter.cairo_set_source_color(cr, this._dangerColor);
             }else if(this._percentage < this._warning){
-                log(this._warningColor);
                 Clutter.cairo_set_source_color(cr, this._warningColor);
             }else{
-                log(this._normalColor);
                 Clutter.cairo_set_source_color(cr, this._normalColor);
             }
             cr.arc((width) / 2,
@@ -132,6 +129,7 @@ var PieChart = GObject.registerClass(
             this._write_centered_text(cr, width/2, height/2, texttoshow,
                                       'Ubuntu', '10');
             cr.restore();
+            cr.$dispose();
         }
 
         _write_centered_text(cr, x, y, text, font, size){
