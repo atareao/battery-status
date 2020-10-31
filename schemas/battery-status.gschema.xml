@@ -16,5 +16,30 @@
             <summary>Dark theme</summary>
             <description>Enable dark theme otherwise light theme</description>
         </key>
+        <key type="s" name="normal-color">
+          <default>'#D9D9D9'</default>
+          <summary>Normal color</summary>
+          <description>Normal color for pie</description>
+        </key>
+        <key type="i" name="warning">
+          <default>30</default>
+          <summary>Warning</summary>
+          <description>Show warning color when space over this value</description>
+        </key>
+        <key type="s" name="warning-color">
+          <default>'#DED336'</default>
+          <summary>Warning color</summary>
+          <description>Warning color for pie</description>
+        </key>
+        <key type="i" name="danger">
+          <default>10</default>
+          <summary>Danger</summary>
+          <description>Show danger color when space over this value</description>
+        </key>
+        <key type="s" name="danger-color">
+          <default>'#CF0032'</default>
+          <summary>Danger color</summary>
+          <description>Danger color for pie</description>
+        </key>
     </schema>
 </schemalist>

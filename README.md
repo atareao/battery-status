@@ -1,11 +1,11 @@
 
 <!-- start project-info -->
 <!--
-project_title: WireGuard Indicator
-github_project: https://github.com/atareao/wireguard-indicator
+project_title: Battery Status
+github_project: https://github.com/atareao/battery-status
 license: MIT
-icon: /datos/Sync/Programacion/gnome-shell/wireguard-indicator@atareao.es/icons/wireguard-icon.svg
-homepage: https://www.atareao.es/aplicacion/wireguard-indicator
+icon: /datos/Sync/Programacion/gnome-shell/battery-status@atareao.es/icons/battery-status-icon.svg
+homepage: https://www.atareao.es/aplicacion/battery-status
 license-badge: True
 contributors-badge: True
 lastcommit-badge: True
@@ -17,73 +17,60 @@ codefactor-badge: True
 <!-- start badges -->
 
 ![License MIT](https://img.shields.io/badge/license-MIT-green)
-![Contributors](https://img.shields.io/github/contributors-anon/atareao/wireguard-indicator)
-![Last commit](https://img.shields.io/github/last-commit/atareao/wireguard-indicator)
-[![CodeFactor](https://www.codefactor.io/repository/github/atareao/wireguard-indicator/badge/master)](https://www.codefactor.io/repository/github/atareao/wireguard-indicator/overview/master)
+![Contributors](https://img.shields.io/github/contributors-anon/atareao/battery-status)
+![Last commit](https://img.shields.io/github/last-commit/atareao/battery-status)
+[![CodeFactor](https://www.codefactor.io/repository/github/atareao/battery-status/badge/master)](https://www.codefactor.io/repository/github/atareao/battery-status/overview/master)
 <!-- end badges -->
 
 <!-- start description -->
-<h1 align="center">Welcome to <span id="project_title">WireGuard Indicator</span> 👋</h1>
+<h1 align="center">Welcome to <span id="project_title">Battery Status</span> 👋</h1>
 <p>
-<a href="https://www.atareao.es/aplicacion/wireguard-indicator" id="homepage" rel="nofollow">
-<img align="right" height="128" id="icon" src="icons/wireguard-icon.svg" width="128"/>
+<a href="https://www.atareao.es/aplicacion/battery-status" id="homepage" rel="nofollow">
+<img align="right" height="128" id="icon" src="icons/battery-status-icon.svg" width="128"/>
 </a>
 </p>
-<h2>🏠 <a href="https://www.atareao.es/aplicacion/wireguard-indicator" id="homepage">Homepage</a></h2>
-<p><span id="project_title">WireGuard Indicator</span> is an indicator to show the status of your WireGuard VPN.</p>
-<p>WireGuard Indicator can enable and disable the WireGuard VPN by clicking on it.</p>
-<p>You need becomes root</p>
+<h2>🏠 <a href="https://www.atareao.es/aplicacion/battery-status" id="homepage">Homepage</a></h2>
+<p><span id="project_title">Battery Status</span> is an indicator to show the status of your battery.</p>
+
 <!-- end description -->
 
 <!-- start prerequisites -->
 ## Prerequisites
 
-You need WireGuard. To install it, simply,
-
-```
-sudo apt install wireguard
-```
-
-Of course, you need to configure your loved WireGuard.
+You need GNOME Shell
 <!-- end prerequisites -->
 
 <!-- start installing -->
-## Installing <span id="project_title">WireGuard Indicator</span>
+## Installing <span id="project_title">Battery Status</span>
 
-To install <span id="project_title">WireGuard Indicator</span>, follow these steps:
+To install <span id="project_title">Battery Status</span>, follow these steps:
 
 Goto [GNOME Extensions page](https://extensions.gnome.org/) and search for WireGuard Indicator.
 
 Enable the extension by click the switch.
+
 <!-- end installing -->
 
 <!-- start using -->
-## Using <span id="project_title">WireGuard Indicator</span>
+## Using <span id="project_title">Battery Status</span>
 
-When you start **<span id="project_title">WireGuard Indicator</span>** it goes to Indicator Area, as you can see in the next screenshot,
+When you start **<span id="project_title">Battery Status</span>** it goes to Indicator Area, as you can see in the next screenshot,
 
-![WireGuard Indicator](./screenshots/screenshot_01.png)
+![Battery Status](./screenshots/screenshot_01.png)
 
-In this screenshot, the language is Spanish, but, if there is no translation for your language, you will find the app in English.
+There are a lot of options to configure <span id="project_title">Battery Status</span>
 
-If you click to enable WireGuard, a dialog appears to ask you for your password to gain root rights.
+![Battery Status](./screenshots/screenshot_02.png)
 
-![WireGuard Indicator](./screenshots/screenshot_02.png)
+About
 
-You can set some options as you can see in next screenshot
-
-![WireGuard Indicator](./screenshots/screenshot_03.png)
-
-* Set the systemd service name
-* Set the check time
-* Enable the dark theme for the WireGuard Indicator icon
-
+![Battery Status](./screenshots/screenshot_03.png)
 <!-- end using -->
 
 <!-- start contributing -->
-## Contributing to <span id="project_title">WireGuard Indicator</span>
+## Contributing to <span id="project_title">Battery Status</span>
 
-To contribute to **<span id="project_title">WireGuard Indicator</span>**, follow these steps:
+To contribute to **<span id="project_title">Battery Status</span>**, follow these steps:
 
 1. Fork this repository.
 2. Create a branch: `git checkout -b <branch_name>`.
@@ -100,6 +87,7 @@ Alternatively see the GitHub documentation on [creating a pull request](https://
 ## 👤 Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
 
 
 <!-- end contributors -->

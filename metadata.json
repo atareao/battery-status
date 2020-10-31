@@ -6,5 +6,5 @@
     "uuid": "battery-status@atareao.es",
     "gettext-domain": "battery-status@atareao.es", 
     "settings-schema": "es.atareao.battery-status",
-    "version": 1
+    "version": 2
 }

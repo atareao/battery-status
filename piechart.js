@@ -10,43 +10,17 @@ const Cairo = imports.cairo;
 var PieChart = GObject.registerClass(
     class PieChart extends Clutter.Actor{
         _init(width, height, percentage, warning=30, danger=10,
-              normalColor=null, warningColor=null, dangerColor=null){
+              normalColor='#00FF00', warningColor='#FFFF00',
+              dangerColor='#FF0000'){
             super._init();
             this._width = width;
             this._height = height;
             this._percentage = percentage;
             this._warning = warning;
             this._danger = danger;
-            if(normalColor == null){
-                this._normalColor = new Clutter.Color({
-                    red: 0,
-                    blue: 0,
-                    green: 255,
-                    alpha: 255
-                });
-            }else{
-                this._normalColor = normalColor;
-            }
-            if(warningColor == null){
-                this._warningColor = new Clutter.Color({
-                    red: 255,
-                    blue: 0,
-                    green: 255,
-                    alpha: 255
-                });
-            }else{
-                this._warningColor = warningColor;
-            }
-            if(dangerColor == null){
-                this._dangerColor = new Clutter.Color({
-                    red: 255,
-                    blue: 0,
-                    green: 0,
-                    alpha: 255
-                });
-            }else{
-                this._dangerColor = dangerColor;
-            }
+            this.setNormalColor(normalColor);
+            this.setWarningColor(warningColor)
+            this.setDangerColor(dangerColor)
             this._canvas = new Clutter.Canvas();
             this._canvas.set_size(width, height);
             this._canvas.connect('draw', (canvas, cr, width, height)=>{
@@ -80,15 +54,15 @@ var PieChart = GObject.registerClass(
         }
 
         setNormalColor(normalColor){
-            this._normalColor = normalColor;
+            this._normalColor = Clutter.Color.from_string(normalColor)[1];
         }
 
         setWarningColor(warningColor){
-            this._warningColor = warningColor;
+            this._warningColor = Clutter.Color.from_string(warningColor)[1];
         }
 
         setDangerColor(dangerColor){
-            this._dangerColor = dangerColor;
+            this._dangerColor = Clutter.Color.from_string(dangerColor)[1];
         }
 
         redraw(){
@@ -96,19 +70,23 @@ var PieChart = GObject.registerClass(
         }
 
         _draw(canvas, cr, width, height){
+            let linew = width * 0.15;
             cr.save();
             Clutter.cairo_set_source_color(cr, new Clutter.Color({
-                red: 70, 
-                blue: 70,
-                green: 70,
+                red: 50, 
+                blue: 50,
+                green: 50,
                 alpha: 255
             }));
-            cr.rectangle(0, 0, width, height);
+            cr.arc((width) / 2,
+                   (height) / 2,
+                   parseInt((width - linew) / 2 * 0.8),
+                   0, 2 * Math.PI)
+            //cr.rectangle(0, 0, width, height);
             cr.fill();
             cr.restore();
             // Begin to paint
             cr.save();
-            let linew = width * 0.15;
             cr.setLineWidth(linew);
             Clutter.cairo_set_source_color(cr, new Clutter.Color({
                 red: 80, 
@@ -119,16 +97,19 @@ var PieChart = GObject.registerClass(
             cr.arc((width) / 2,
                    (height) / 2,
                    parseInt((width - linew) / 2 * 0.8),
-                   0.00001, 0);
+                   0, 2 * Math.PI)
             cr.stroke();
             cr.restore();
             cr.save();
             cr.setLineWidth(linew);
             if(this._percentage < this._danger){
+                log(this._dangerColor);
                 Clutter.cairo_set_source_color(cr, this._dangerColor);
             }else if(this._percentage < this._warning){
+                log(this._warningColor);
                 Clutter.cairo_set_source_color(cr, this._warningColor);
             }else{
+                log(this._normalColor);
                 Clutter.cairo_set_source_color(cr, this._normalColor);
             }
             cr.arc((width) / 2,

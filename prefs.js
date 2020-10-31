@@ -26,8 +26,9 @@ imports.gi.versions.GLib = "2.0";
 imports.gi.versions.GObject = "2.0";
 imports.gi.versions.Gio = "2.0";
 imports.gi.versions.Gtk = "3.0";
+imports.gi.versions.Gdk = "3.0";
 
-const {GLib, GObject, Gio, Gtk} = imports.gi;
+const {GLib, GObject, Gio, Gtk, Gdk} = imports.gi;
 
 const ExtensionUtils = imports.misc.extensionUtils;
 const Extension = ExtensionUtils.getCurrentExtension();
@@ -117,8 +118,8 @@ var AboutWidget = GObject.registerClass(
     }
 );
 
-var WireGuarIndicatorPreferencesWidget = GObject.registerClass(
-    class WireGuarIndicatorPreferencesWidget extends PreferencesWidget.Stack{
+var BatteryStatusPreferencesWidget = GObject.registerClass(
+    class BatteryStatusPreferencesWidget extends PreferencesWidget.Stack{
         _init(){
             super._init();
 
@@ -133,6 +134,18 @@ var WireGuarIndicatorPreferencesWidget = GObject.registerClass(
             let indicatorSection = preferencesPage.addSection(_("Indicator options"), null, {});
             indicatorSection.addGSetting(settings, "path");
             indicatorSection.addGSetting(settings, "checktime");
+            indicatorSection.addGSetting(settings,
+                                         "normal-color",
+                                         PreferencesWidget.ColorSetting);
+            indicatorSection.addGSetting(settings, "warning");
+            indicatorSection.addGSetting(settings,
+                                         "warning-color",
+                                         PreferencesWidget.ColorSetting);
+            indicatorSection.addGSetting(settings, "danger");
+            indicatorSection.addGSetting(settings,
+                                         "danger-color",
+                                         PreferencesWidget.ColorSetting);
+
             let appearanceSection = preferencesPage.addSection(_("General options"), null, {});
             appearanceSection.addGSetting(settings, "darktheme");
 
@@ -148,12 +161,25 @@ var WireGuarIndicatorPreferencesWidget = GObject.registerClass(
     }
 );
 
+function center(window){
+    let defaultDisplay = Gdk.Display.get_default();
+    let monitor = defaultDisplay.get_primary_monitor();
+    let scale = monitor.get_scale_factor();
+    let monitor_width = monitor.get_geometry().width / scale;
+    let monitor_height = monitor.get_geometry().height / scale;
+    let width = window.get_preferred_width()[0];
+    let height = window.get_preferred_height()[0];
+    window.move((monitor_width - width)/2, (monitor_height - height)/2);
+}
+
 function buildPrefsWidget() {
-    let preferencesWidget = new WireGuarIndicatorPreferencesWidget();
+    let preferencesWidget = new BatteryStatusPreferencesWidget();
     GLib.timeout_add(GLib.PRIORITY_DEFAULT, 0, () => {
         let prefsWindow = preferencesWidget.get_toplevel()
-        prefsWindow.set_position(Gtk.WindowPosition.CENTER_ALWAYS);
         prefsWindow.get_titlebar().custom_title = preferencesWidget.switcher;
+        let width = prefsWindow.get_preferred_width()[0];
+        prefsWindow.resize(width, 650);
+        center(prefsWindow);
         let icon = Extension.path + '/icons/battery-status-icon.svg';
         log(icon);
         prefsWindow.set_icon_from_file(icon);

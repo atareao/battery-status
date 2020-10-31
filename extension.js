@@ -62,7 +62,7 @@ var BatteryStatus = GObject.registerClass(
         _init(){
             super._init(St.Align.START);
             this._settings = Convenience.getSettings();
-            this._checktime = 60;
+            this._loadPreferences();
 
             /* Icon indicator */
             Gtk.IconTheme.get_default().append_search_path(
@@ -75,7 +75,6 @@ var BatteryStatus = GObject.registerClass(
                                            y_expand: true,
                                            y_align: Clutter.ActorAlign.CENTER });
             box.add(this._timeLeft);
-            this._update();
             //box.add(PopupMenu.arrowIcon(St.Side.BOTTOM));
             this.actor.add_child(box);
             /* Start Menu */
@@ -96,11 +95,24 @@ var BatteryStatus = GObject.registerClass(
             /* Help */
             this.menu.addMenuItem(this._get_help());
             /* Init */
+            this._update();
             this._sourceId = 0;
             this._settingsChanged();
             this._settings.connect('changed',
                                    this._settingsChanged.bind(this));
         }
+
+        _loadPreferences(){
+            this._path = this._getValue('path');
+            this._checktime = this._getValue('checktime');
+            this._darktheme = this._getValue('darktheme');
+            this._normalColor = this._getValue('normal-color');
+            this._warning = this._getValue('warning');
+            this._warningColor = this._getValue('warning-color');
+            this._danger = this._getValue('danger');
+            this._dangerColor = this._getValue('danger-color');
+        }
+
         _getRow(label, value){
             let row = new St.BoxLayout();
             row.add_actor(new St.Label({
@@ -148,8 +160,26 @@ var BatteryStatus = GObject.registerClass(
                                 y_align: Clutter.ActorAlign.CENTER,
                             });
             batteryHealthInnerBox.add_actor(cc);
-            this._batteryHealthPie = new PieChart(70, 70, 30);
+            this._batteryHealthPie = new PieChart(70, 70, 30, this._warning,
+                this._danger, this._normalColor, this._warningColor,
+                this._dangerColor);
             cc.add_actor(this._batteryHealthPie);
+            this._voltageNow = new St.Label({
+                text: '7,498 V',
+               x_expand: true,
+               x_align: Clutter.ActorAlign.END });
+            batteryHealthInnerBox.add_actor(this._getRow(
+                _('Voltage now:'),
+                this._voltageNow
+            ));
+            this._originalVoltage = new St.Label({
+                text: '7,640 V',
+               x_expand: true,
+               x_align: Clutter.ActorAlign.END });
+            batteryHealthInnerBox.add_actor(this._getRow(
+                _('Original voltage:'),
+                this._originalVoltage
+            ));
             return itemBatteryHealth;
         }
 
@@ -186,7 +216,9 @@ var BatteryStatus = GObject.registerClass(
                                 y_align: Clutter.ActorAlign.CENTER,
                             });
             batteryChargeInner.add_actor(cc);
-            this._currentChargePie = new PieChart(70, 70, 70);
+            this._currentChargePie = new PieChart(70, 70, 30, this._warning,
+                this._danger, this._normalColor, this._warningColor,
+                this._dangerColor);
             cc.add_actor(this._currentChargePie);
 
             let dd = new St.BoxLayout({
@@ -194,7 +226,9 @@ var BatteryStatus = GObject.registerClass(
                                 y_align: Clutter.ActorAlign.CENTER,
                             });
             batteryChargeInner.add_actor(dd);
-            this._teoricalChargePie = new PieChart(70, 70, 70);
+            this._teoricalChargePie = new PieChart(70, 70, 30, this._warning,
+                this._danger, this._normalColor, this._warningColor,
+                this._dangerColor);
             cc.add_actor(this._teoricalChargePie);
 
             return itemBatteryCharge;
@@ -206,7 +240,6 @@ var BatteryStatus = GObject.registerClass(
         }
 
         _update(){
-            this._path = this._getValue('path');
             if(!this._path.endsWith('/')){
                 this._path = this._path + '/';
             }
@@ -259,6 +292,10 @@ var BatteryStatus = GObject.registerClass(
 
                             log('================= battery =================');
                             this._set_icon_indicator(discharging != null);
+                            let voltageDesign = parseFloat(power_supply_voltage_min_design) / 1000 / 1000;
+                            this._originalVoltage.set_text(voltageDesign.toString() + ' ' + _('V'));
+                            let voltageNow = parseFloat(power_supply_voltage_now) / 1000 /1000;
+                            this._voltageNow.set_text(voltageNow.toString() + ' ' + _('V'));
                             if(power_supply_charge_full != null){
                                 let currentMax = parseFloat(power_supply_charge_full) / 1000;
                                 this._currentMax.set_text(currentMax.toString() + ' ' + _('mAh'));
@@ -330,8 +367,7 @@ var BatteryStatus = GObject.registerClass(
             return true;
         }
         _set_icon_indicator(active){
-            let darktheme = this._getValue('darktheme');
-            let theme_string = (darktheme?'dark': 'light');
+            let theme_string = (this._darktheme?'dark': 'light');
             let status_string = (active ? 'active' : 'paused');
             let icon_string = 'battery-status-' + status_string + '-' + theme_string;
             this.icon.set_gicon(this._get_icon(icon_string));
@@ -395,7 +431,32 @@ var BatteryStatus = GObject.registerClass(
             return menu_help;
         }
         _settingsChanged(){
+            log('==== Settings Changed ====');
+            this._loadPreferences();
+
+            this._batteryHealthPie.setNormalColor(this._normalColor);
+            this._batteryHealthPie.setWarningColor(this._warningColor);
+            this._batteryHealthPie.setDangerColor(this._dangerColor);
+            this._batteryHealthPie.setWarning(this._warning);
+            this._batteryHealthPie.setDanger(this._danger);
+            this._batteryHealthPie.redraw();
+
+            this._currentChargePie.setNormalColor(this._normalColor);
+            this._currentChargePie.setWarningColor(this._warningColor);
+            this._currentChargePie.setDangerColor(this._dangerColor);
+            this._currentChargePie.setWarning(this._warning);
+            this._currentChargePie.setDanger(this._danger);
+            this._currentChargePie.redraw();
+
+            this._teoricalChargePie.setNormalColor(this._normalColor);
+            this._teoricalChargePie.setWarningColor(this._warningColor);
+            this._teoricalChargePie.setDangerColor(this._dangerColor);
+            this._teoricalChargePie.setWarning(this._warning);
+            this._teoricalChargePie.setDanger(this._danger);
+            this._teoricalChargePie.redraw();
+
             this._update();
+
             if(this._sourceId > 0){
                 GLib.source_remove(this._sourceId);
             }

@@ -59,7 +59,6 @@ let ColorSetting = GObject.registerClass(
 
             this.drawingArea = new Gtk.DrawingArea();
             this.drawingArea.connect('draw', (widget, cr)=>{
-                log('DDDD'+this.background_color.green);
                 cr.setSourceRGBA(this.background_color.red,
                                  this.background_color.green,
                                  this.background_color.blue,

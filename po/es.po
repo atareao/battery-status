@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WireGuard Indicator - 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-20 07:27+0200\n"
+"POT-Creation-Date: 2020-10-31 09:55+0100\n"
 "PO-Revision-Date: 2020-09-15 19:23+0200\n"
 "Last-Translator: Lorenzo <atareao@atareao.es>\n"
 "Language-Team: Spanish\n"
@@ -17,169 +17,251 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: schemas/wireguard-indicator.gschema.xml:6
-msgid "Service name"
-msgstr "Nombre del servicio"
+#: schemas/battery-status.gschema.xml:6
+msgid "Power supply path"
+msgstr "Directorio de la batería"
 
-#: schemas/wireguard-indicator.gschema.xml:7
-msgid "Set the name of the systemd service"
-msgstr "Indica el nombre del servicio Systemd de WireGuard"
+#: schemas/battery-status.gschema.xml:7
+msgid "Path of the power supply"
+msgstr "Directorio de la batería"
 
-#: schemas/wireguard-indicator.gschema.xml:11
+#: schemas/battery-status.gschema.xml:11
 msgid "Check time"
 msgstr "Intervalo de comprobación"
 
-#: schemas/wireguard-indicator.gschema.xml:12
-msgid "Set the check time to test the WireGuard status"
-msgstr "Indica el intervalo de comprobación de WireGuard"
+#: schemas/battery-status.gschema.xml:12
+msgid "Set the check time to test the battery status"
+msgstr "Indica el intervalo de comprobación de la batería"
 
-#: schemas/wireguard-indicator.gschema.xml:16
+#: schemas/battery-status.gschema.xml:16
 msgid "Dark theme"
 msgstr "Tema oscuro"
 
-#: schemas/wireguard-indicator.gschema.xml:17
+#: schemas/battery-status.gschema.xml:17
 msgid "Enable dark theme otherwise light theme"
 msgstr "Establece el tema oscuro"
 
-#: extension.js:79
-msgid "Wireguard status"
-msgstr "Estado de Wireguard"
+#: schemas/battery-status.gschema.xml:21
+msgid "Normal color"
+msgstr "Color normal"
 
-#: extension.js:81 extension.js:165
-msgid "Enable WireGuard"
-msgstr "Habilita WireGuard"
+#: schemas/battery-status.gschema.xml:22
+msgid "Normal color for pie"
+msgstr "Color normal"
 
-#: extension.js:91
+#: schemas/battery-status.gschema.xml:26
+msgid "Warning"
+msgstr "Atención"
+
+#: schemas/battery-status.gschema.xml:27
+msgid "Show warning color when space over this value"
+msgstr "Color de atención"
+
+#: schemas/battery-status.gschema.xml:31
+msgid "Warning color"
+msgstr "Color de atención"
+
+#: schemas/battery-status.gschema.xml:32
+msgid "Warning color for pie"
+msgstr "Color de atención"
+
+#: schemas/battery-status.gschema.xml:36
+msgid "Danger"
+msgstr "Peligro"
+
+#: schemas/battery-status.gschema.xml:37
+msgid "Show danger color when space over this value"
+msgstr "Color de peligro"
+
+#: schemas/battery-status.gschema.xml:41
+msgid "Danger color"
+msgstr "Color de peligro"
+
+#: schemas/battery-status.gschema.xml:42
+msgid "Danger color for pie"
+msgstr "Color de peligro"
+
+#: extension.js:90
 msgid "Settings"
 msgstr "Configuración"
 
-#: extension.js:162
-msgid "Disable WireGuard"
-msgstr "Deshabilita WireGuard"
+#: extension.js:135
+msgid "Battery health"
+msgstr "Salud de la batería"
+
+#: extension.js:147
+msgid "Current max:"
+msgstr "Corriente máxima:"
+
+#: extension.js:155
+msgid "Original max:"
+msgstr "Corriente original:"
+
+#: extension.js:172
+msgid "Voltage now:"
+msgstr "Voltaje actual:"
+
+#: extension.js:180
+msgid "Original voltage:"
+msgstr "Voltage original"
+
+#: extension.js:196
+msgid "Battery charge"
+msgstr "Carga de la batería"
 
 #: extension.js:211
+msgid "Current charge:"
+msgstr "Carga actual:"
+
+#: extension.js:296 extension.js:298
+msgid "V"
+msgstr "V"
+
+#: extension.js:301 extension.js:305 extension.js:309
+msgid "mAh"
+msgstr "mAh"
+
+#: extension.js:407
 msgid "Help"
 msgstr "Ayuda"
 
-#: extension.js:213
+#: extension.js:409
 msgid "Project Page"
 msgstr "Página del proyecto"
 
-#: extension.js:215
+#: extension.js:411
 msgid "Get help online..."
 msgstr "Consigue ayuda en línea..."
 
-#: extension.js:217
+#: extension.js:413
 msgid "Report a bug..."
 msgstr "Informa de un error..."
 
-#: extension.js:222
+#: extension.js:418
 msgid "El atareao"
 msgstr "El atareao"
 
-#: extension.js:224
+#: extension.js:420
 msgid "GitHub"
 msgstr "GitHub"
 
-#: extension.js:226
+#: extension.js:422
 msgid "Twitter"
 msgstr "Twitter"
 
-#: extension.js:228
+#: extension.js:424
 msgid "Telegram"
 msgstr "Telegram"
 
-#: extension.js:230
+#: extension.js:426
 msgid "Mastodon"
 msgstr "Mastodon"
 
-#: extension.js:232
+#: extension.js:428
 msgid "Spotify"
 msgstr "Spotify"
 
-#: extension.js:234
+#: extension.js:430
 msgid "YouTube"
 msgstr "YouTube"
 
-#: preferenceswidget.js:232
+#: preferenceswidget.js:231
 msgid "Nothing"
 msgstr "Nada"
 
-#: preferenceswidget.js:245
+#: preferenceswidget.js:244
 msgid "True"
 msgstr "Cierto"
 
-#: preferenceswidget.js:258
+#: preferenceswidget.js:257
 msgid "False"
 msgstr "Falso"
 
-#: prefs.js:63
-msgid "WireGuard Indicator"
-msgstr "Indicador de WireGuard"
+#: prefs.js:64
+msgid "Battery Status"
+msgstr "Estado de la batería"
 
-#: prefs.js:68
+#: prefs.js:69
 msgid "Version: "
 msgstr "Versión: "
 
-#: prefs.js:79
+#: prefs.js:80
 msgid "Atareao"
 msgstr "Atareao"
 
-#: prefs.js:86
+#: prefs.js:87
 msgid "Copyright © 2020 Lorenzo Carbonell"
 msgstr "Copyright © 2020 Lorenzo Carbonell"
 
-#: prefs.js:93
+#: prefs.js:94
 msgid ""
 "THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS "
 "OR\n"
 msgstr ""
 
-#: prefs.js:94
+#: prefs.js:95
 msgid ""
 "IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n"
 msgstr ""
 
-#: prefs.js:95
+#: prefs.js:96
 msgid ""
 "FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n"
 msgstr ""
 
-#: prefs.js:96
+#: prefs.js:97
 msgid ""
 "AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n"
 msgstr ""
 
-#: prefs.js:97
+#: prefs.js:98
 msgid ""
 "LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING\n"
 msgstr ""
 
-#: prefs.js:98
+#: prefs.js:99
 msgid ""
 "FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER "
 "DEALINGS\n"
 msgstr ""
 
-#: prefs.js:99
+#: prefs.js:100
 msgid "IN THE SOFTWARE.\n"
 msgstr ""
 
-#: prefs.js:129
+#: prefs.js:130
 msgid "Preferences"
 msgstr "Preferencias"
 
-#: prefs.js:133
+#: prefs.js:134
 msgid "Indicator options"
 msgstr "Opciones del indicador"
 
-#: prefs.js:136
+#: prefs.js:149
 msgid "General options"
 msgstr "Opciones generales"
 
-#: prefs.js:142
+#: prefs.js:155
 msgid "About"
 msgstr "Acerca de"
+
+#~ msgid "Service name"
+#~ msgstr "Nombre del servicio"
+
+#~ msgid "Set the name of the systemd service"
+#~ msgstr "Indica el nombre del servicio Systemd de WireGuard"
+
+#~ msgid "Wireguard status"
+#~ msgstr "Estado de Wireguard"
+
+#~ msgid "Enable WireGuard"
+#~ msgstr "Habilita WireGuard"
+
+#~ msgid "Disable WireGuard"
+#~ msgstr "Deshabilita WireGuard"
+
+#~ msgid "WireGuard Indicator"
+#~ msgstr "Indicador de WireGuard"
 
 #~ msgid "Loading..."
 #~ msgstr "Cargando"
