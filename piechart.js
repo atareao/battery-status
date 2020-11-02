@@ -70,28 +70,20 @@ var PieChart = GObject.registerClass(
         }
 
         _draw(canvas, cr, width, height){
-            let linew = width * 0.15;
+            // Clear the canvas
             cr.save();
-            Clutter.cairo_set_source_color(cr, new Clutter.Color({
-                red: 50, 
-                blue: 50,
-                green: 50,
-                alpha: 255
-            }));
-            cr.arc((width) / 2,
-                   (height) / 2,
-                   parseInt((width - linew) / 2 * 0.8),
-                   0, 2 * Math.PI)
-            //cr.rectangle(0, 0, width, height);
-            cr.fill();
+            cr.setOperator(Cairo.Operator.CLEAR);
+            cr.paint();
             cr.restore();
+            cr.setOperator(Cairo.Operator.OVER);
+            let linew = width * 0.15;
             // Begin to paint
             cr.save();
             cr.setLineWidth(linew);
             Clutter.cairo_set_source_color(cr, new Clutter.Color({
-                red: 80, 
-                blue: 80,
-                green: 80,
+                red: 60, 
+                blue: 60,
+                green: 60,
                 alpha: 255
             }));
             cr.arc((width) / 2,

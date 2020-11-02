@@ -1,10 +1,12 @@
 {
-    "name": "Battery Status",
-    "description": "Get information about your battery status",
-    "shell-version": ["3.36"],
-    "url": "https://github.com/atareao/battery-status", 
-    "uuid": "battery-status@atareao.es",
-    "gettext-domain": "battery-status@atareao.es", 
-    "settings-schema": "es.atareao.battery-status",
-    "version": 3
+  "description": "Get information about your battery status",
+  "gettext-domain": "battery-status@atareao.es",
+  "name": "Battery Status",
+  "settings-schema": "es.atareao.battery-status",
+  "shell-version": [
+    "3.36"
+  ],
+  "url": "https://github.com/atareao/battery-status",
+  "uuid": "battery-status@atareao.es",
+  "version": 4
 }
