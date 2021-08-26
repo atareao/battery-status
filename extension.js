@@ -22,14 +22,6 @@
  * IN THE SOFTWARE.
  */
 
-imports.gi.versions.Gtk = "3.0";
-imports.gi.versions.Gdk = "3.0";
-imports.gi.versions.Gio = "2.0";
-imports.gi.versions.Clutter = "1.0";
-imports.gi.versions.St = "1.0";
-imports.gi.versions.GObject = "3.0";
-imports.gi.versions.GLib = "2.0";
-
 const {Gtk, Gdk, Gio, Clutter, St, GObject, GLib, Pango, PangoCairo} = imports.gi;
 const Cairo = imports.cairo;
 
@@ -91,6 +83,8 @@ var BatteryStatus = GObject.registerClass(
             });
             this.menu.addMenuItem(this.settingsMenuItem);
             /* Init */
+            this._set_icon_indicator(false);
+            this._timeLeft.set_text("");
             this._update();
             this._sourceId = 0;
             this._settingsChanged();
@@ -339,9 +333,6 @@ var BatteryStatus = GObject.registerClass(
                             logError(e);
                         }
                     });
-                }else{
-                    this._set_icon_indicator(false);
-                    this._timeLeft.set_text("");
                 }
             } catch (e) {
                 logError(e);
@@ -349,23 +340,24 @@ var BatteryStatus = GObject.registerClass(
             return true;
         }
         _set_icon_indicator(active){
-            let theme_string = (this._darktheme?'dark': 'light');
-            let status_string = (active ? 'active' : 'paused');
-            let icon_string = 'battery-status-' + status_string + '-' + theme_string;
-            this.icon.set_gicon(this._get_icon(icon_string));
+            let themeString = (this._darktheme?'dark': 'light');
+            let statusString = (active ? 'active' : 'paused');
+            let iconString = `battery-status-${statusString}-${themeString}`;
+            this.icon.set_gicon(this._get_icon(iconString));
         }
 
-        _get_icon(icon_name){
-            let base_icon = Extension.path + '/icons/' + icon_name;
-            let file_icon = Gio.File.new_for_path(base_icon + '.png')
-            if(file_icon.query_exists(null) == false){
-                file_icon = Gio.File.new_for_path(base_icon + '.svg')
+        _get_icon(iconName){
+            const basePath = Extension.dir.get_child("icons").get_path();
+            let fileIcon = Gio.File.new_for_path(
+                `${basePath}/${iconName}.svg`);
+            if(fileIcon.query_exists(null) == false){
+                fileIcon = Gio.File.new_for_path(
+                `${basePath}/${iconName}.png`);
             }
-            if(file_icon.query_exists(null) == false){
+            if(fileIcon.query_exists(null) == false){
                 return null;
             }
-            let icon = Gio.icon_new_for_string(file_icon.get_path());
-            return icon;
+            return Gio.icon_new_for_string(fileIcon.get_path());
         }
 
         _settingsChanged(){
