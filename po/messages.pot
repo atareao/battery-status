@@ -8,13 +8,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-31 10:04+0100\n"
+"POT-Creation-Date: 2021-08-26 07:03+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: schemas/battery-status.gschema.xml:6
@@ -25,7 +25,7 @@ msgstr ""
 msgid "Path of the power supply"
 msgstr ""
 
-#: schemas/battery-status.gschema.xml:11
+#: schemas/battery-status.gschema.xml:11 prefs.js:69 prefs.js:81
 msgid "Check time"
 msgstr ""
 
@@ -81,166 +81,166 @@ msgstr ""
 msgid "Danger color for pie"
 msgstr ""
 
-#: extension.js:90
+#: extension.js:88
 msgid "Settings"
 msgstr ""
 
-#: extension.js:135
+#: extension.js:131
 msgid "Battery health"
 msgstr ""
 
-#: extension.js:147
+#: extension.js:143
 msgid "Current max:"
 msgstr ""
 
-#: extension.js:155
+#: extension.js:151
 msgid "Original max:"
 msgstr ""
 
-#: extension.js:172
+#: extension.js:168
 msgid "Voltage now:"
 msgstr ""
 
-#: extension.js:180
+#: extension.js:176
 msgid "Original voltage:"
 msgstr ""
 
-#: extension.js:196
+#: extension.js:192
 msgid "Battery charge"
 msgstr ""
 
-#: extension.js:211
+#: extension.js:207
 msgid "Current charge:"
 msgstr ""
 
-#: extension.js:296 extension.js:298
+#: extension.js:281 extension.js:283
 msgid "V"
 msgstr ""
 
-#: extension.js:301 extension.js:305 extension.js:309
+#: extension.js:286 extension.js:290 extension.js:294
 msgid "mAh"
 msgstr ""
 
-#: extension.js:407
-msgid "Help"
+#: dialogwidgets.js:55
+msgid "Cancel"
 msgstr ""
 
-#: extension.js:409
-msgid "Project Page"
+#: dialogwidgets.js:56
+msgid "Ok"
 msgstr ""
 
-#: extension.js:411
-msgid "Get help online..."
+#: aboutpage.js:47
+msgid "Buy me a coffee"
 msgstr ""
 
-#: extension.js:413
-msgid "Report a bug..."
+#: aboutpage.js:52
+msgid "Version"
 msgstr ""
 
-#: extension.js:418
-msgid "El atareao"
+#: aboutpage.js:54
+msgid "GNOME Version"
 msgstr ""
 
-#: extension.js:420
-msgid "GitHub"
+#: aboutpage.js:56
+msgid "OS"
 msgstr ""
 
-#: extension.js:422
-msgid "Twitter"
+#: aboutpage.js:57
+msgid "SessionType"
 msgstr ""
 
-#: extension.js:424
-msgid "Telegram"
+#: aboutpage.js:89
+msgid "Developers"
 msgstr ""
 
-#: extension.js:426
-msgid "Mastodon"
+#: aboutpage.js:96
+msgid "Contributors"
 msgstr ""
 
-#: extension.js:428
-msgid "Spotify"
+#: aboutpage.js:97
+msgid "Thank you to all contributors!"
 msgstr ""
 
-#: extension.js:430
-msgid "YouTube"
+#: aboutpage.js:98
+msgid "For a list of all contributors, please visit"
 msgstr ""
 
-#: preferenceswidget.js:231
-msgid "Nothing"
+#: aboutpage.js:107
+msgid "Supporters"
 msgstr ""
 
-#: preferenceswidget.js:244
-msgid "True"
+#: aboutpage.js:108
+msgid "Thank you to all supporters!"
 msgstr ""
 
-#: preferenceswidget.js:257
-msgid "False"
+#: aboutpage.js:109
+msgid "For a list of all supporters, please visit"
 msgstr ""
 
-#: prefs.js:64
-msgid "Battery Status"
+#: aboutpage.js:116
+msgid "License"
 msgstr ""
 
-#: prefs.js:69
-msgid "Version: "
+#: aboutpage.js:129
+msgid "More info"
 msgstr ""
 
-#: prefs.js:80
-msgid "Atareao"
+#: aboutpage.js:139
+msgid "More information"
 msgstr ""
 
-#: prefs.js:87
-msgid "Copyright © 2020 Lorenzo Carbonell"
+#: aboutpage.js:142
+msgid "Report an issue"
 msgstr ""
 
-#: prefs.js:94
-msgid ""
-"THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS "
-"OR\n"
-msgstr ""
-
-#: prefs.js:95
-msgid ""
-"IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n"
-msgstr ""
-
-#: prefs.js:96
-msgid ""
-"FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n"
-msgstr ""
-
-#: prefs.js:97
-msgid ""
-"AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n"
-msgstr ""
-
-#: prefs.js:98
-msgid ""
-"LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING\n"
-msgstr ""
-
-#: prefs.js:99
-msgid ""
-"FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER "
-"DEALINGS\n"
-msgstr ""
-
-#: prefs.js:100
-msgid "IN THE SOFTWARE.\n"
-msgstr ""
-
-#: prefs.js:130
-msgid "Preferences"
-msgstr ""
-
-#: prefs.js:134
+#: prefs.js:50
 msgid "Indicator options"
 msgstr ""
 
-#: prefs.js:149
-msgid "General options"
+#: prefs.js:75
+msgid "Theme"
 msgstr ""
 
-#: prefs.js:155
+#: prefs.js:78
+msgid "Battery Status Preferences"
+msgstr ""
+
+#: prefs.js:82
+msgid "Style"
+msgstr ""
+
+#: prefs.js:83
 msgid "About"
+msgstr ""
+
+#: prefs.js:92
+msgid "Battery Status Configuration"
+msgstr ""
+
+#: preferenceswidget.js:205
+msgid "Nothing"
+msgstr ""
+
+#: preferenceswidget.js:218
+msgid "True"
+msgstr ""
+
+#: preferenceswidget.js:231
+msgid "False"
+msgstr ""
+
+#: preferenceswidget.js:425 preferenceswidget.js:956
+msgid "Edit"
+msgstr ""
+
+#: preferenceswidget.js:472 preferenceswidget.js:490 preferenceswidget.js:519
+msgid "Name"
+msgstr ""
+
+#: preferenceswidget.js:478 preferenceswidget.js:490 preferenceswidget.js:519
+msgid "Service"
+msgstr ""
+
+#: preferenceswidget.js:966
+msgid "Remove"
 msgstr ""
