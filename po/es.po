@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WireGuard Indicator - 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-31 09:55+0100\n"
+"POT-Creation-Date: 2021-08-26 06:58+0200\n"
 "PO-Revision-Date: 2020-09-15 19:23+0200\n"
 "Last-Translator: Lorenzo <atareao@atareao.es>\n"
 "Language-Team: Spanish\n"
@@ -25,7 +25,7 @@ msgstr "Directorio de la batería"
 msgid "Path of the power supply"
 msgstr "Directorio de la batería"
 
-#: schemas/battery-status.gschema.xml:11
+#: schemas/battery-status.gschema.xml:11 prefs.js:69 prefs.js:81
 msgid "Check time"
 msgstr "Intervalo de comprobación"
 
@@ -81,187 +81,166 @@ msgstr "Color de peligro"
 msgid "Danger color for pie"
 msgstr "Color de peligro"
 
-#: extension.js:90
+#: extension.js:88
 msgid "Settings"
 msgstr "Configuración"
 
-#: extension.js:135
+#: extension.js:131
 msgid "Battery health"
 msgstr "Salud de la batería"
 
-#: extension.js:147
+#: extension.js:143
 msgid "Current max:"
 msgstr "Corriente máxima:"
 
-#: extension.js:155
+#: extension.js:151
 msgid "Original max:"
 msgstr "Corriente original:"
 
-#: extension.js:172
+#: extension.js:168
 msgid "Voltage now:"
 msgstr "Voltaje actual:"
 
-#: extension.js:180
+#: extension.js:176
 msgid "Original voltage:"
 msgstr "Voltage original"
 
-#: extension.js:196
+#: extension.js:192
 msgid "Battery charge"
 msgstr "Carga de la batería"
 
-#: extension.js:211
+#: extension.js:207
 msgid "Current charge:"
 msgstr "Carga actual:"
 
-#: extension.js:296 extension.js:298
+#: extension.js:281 extension.js:283
 msgid "V"
 msgstr "V"
 
-#: extension.js:301 extension.js:305 extension.js:309
+#: extension.js:286 extension.js:290 extension.js:294
 msgid "mAh"
 msgstr "mAh"
 
-#: extension.js:407
-msgid "Help"
-msgstr "Ayuda"
+#: dialogwidgets.js:55
+msgid "Cancel"
+msgstr "Cancelar"
 
-#: extension.js:409
-msgid "Project Page"
-msgstr "Página del proyecto"
+#: dialogwidgets.js:56
+msgid "Ok"
+msgstr "Aceptar"
 
-#: extension.js:411
-msgid "Get help online..."
-msgstr "Consigue ayuda en línea..."
+#: aboutpage.js:47
+msgid "Buy me a coffee"
+msgstr "Apoya con un café"
 
-#: extension.js:413
-msgid "Report a bug..."
+#: aboutpage.js:52
+msgid "Version"
+msgstr "Versión"
+
+#: aboutpage.js:54
+msgid "GNOME Version"
+msgstr "Versión de GNOME"
+
+#: aboutpage.js:56
+msgid "OS"
+msgstr "OS"
+
+#: aboutpage.js:57
+msgid "SessionType"
+msgstr "Tipo de sesión"
+
+#: aboutpage.js:89
+msgid "Developers"
+msgstr "Desarrolladores"
+
+#: aboutpage.js:96
+msgid "Contributors"
+msgstr "Contribuidores"
+
+#: aboutpage.js:97
+msgid "Thank you to all contributors!"
+msgstr "Gracias a todos los contribuidores!"
+
+#: aboutpage.js:98
+msgid "For a list of all contributors, please visit"
+msgstr "Para ver una lista de todos los contribuidores, por favor visita"
+
+#: aboutpage.js:107
+msgid "Supporters"
+msgstr "Colaboradores"
+
+#: aboutpage.js:108
+msgid "Thank you to all supporters!"
+msgstr "Gracias a todos los colaboradores!"
+
+#: aboutpage.js:109
+msgid "For a list of all supporters, please visit"
+msgstr "Para ver una lista de todos los colaboradores, por favor visita"
+
+#: aboutpage.js:116
+msgid "License"
+msgstr "Licencia"
+
+#: aboutpage.js:129
+msgid "More info"
+msgstr "Mas información"
+
+#: aboutpage.js:139
+msgid "More information"
+msgstr "Mas información"
+
+#: aboutpage.js:142
+msgid "Report an issue"
 msgstr "Informa de un error..."
 
-#: extension.js:418
-msgid "El atareao"
-msgstr "El atareao"
-
-#: extension.js:420
-msgid "GitHub"
-msgstr "GitHub"
-
-#: extension.js:422
-msgid "Twitter"
-msgstr "Twitter"
-
-#: extension.js:424
-msgid "Telegram"
-msgstr "Telegram"
-
-#: extension.js:426
-msgid "Mastodon"
-msgstr "Mastodon"
-
-#: extension.js:428
-msgid "Spotify"
-msgstr "Spotify"
-
-#: extension.js:430
-msgid "YouTube"
-msgstr "YouTube"
-
-#: preferenceswidget.js:231
-msgid "Nothing"
-msgstr "Nada"
-
-#: preferenceswidget.js:244
-msgid "True"
-msgstr "Cierto"
-
-#: preferenceswidget.js:257
-msgid "False"
-msgstr "Falso"
-
-#: prefs.js:64
-msgid "Battery Status"
-msgstr "Estado de la batería"
-
-#: prefs.js:69
-msgid "Version: "
-msgstr "Versión: "
-
-#: prefs.js:80
-msgid "Atareao"
-msgstr "Atareao"
-
-#: prefs.js:87
-msgid "Copyright © 2020 Lorenzo Carbonell"
-msgstr "Copyright © 2020 Lorenzo Carbonell"
-
-#: prefs.js:94
-msgid ""
-"THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS "
-"OR\n"
-msgstr ""
-
-#: prefs.js:95
-msgid ""
-"IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n"
-msgstr ""
-
-#: prefs.js:96
-msgid ""
-"FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n"
-msgstr ""
-
-#: prefs.js:97
-msgid ""
-"AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n"
-msgstr ""
-
-#: prefs.js:98
-msgid ""
-"LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING\n"
-msgstr ""
-
-#: prefs.js:99
-msgid ""
-"FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER "
-"DEALINGS\n"
-msgstr ""
-
-#: prefs.js:100
-msgid "IN THE SOFTWARE.\n"
-msgstr ""
-
-#: prefs.js:130
-msgid "Preferences"
-msgstr "Preferencias"
-
-#: prefs.js:134
+#: prefs.js:50
 msgid "Indicator options"
 msgstr "Opciones del indicador"
 
-#: prefs.js:149
-msgid "General options"
-msgstr "Opciones generales"
+#: prefs.js:75
+msgid "Theme"
+msgstr "Tema"
 
-#: prefs.js:155
+#: prefs.js:78
+msgid "Battery Status Preferences"
+msgstr "Preferencias de Battery Status"
+
+#: prefs.js:82
+msgid "Style"
+msgstr "Estilo"
+
+#: prefs.js:83
 msgid "About"
 msgstr "Acerca de"
 
-#~ msgid "Service name"
-#~ msgstr "Nombre del servicio"
+#: prefs.js:92
+msgid "Battery Status Configuration"
+msgstr "Configuración de Battery Status"
 
-#~ msgid "Set the name of the systemd service"
-#~ msgstr "Indica el nombre del servicio Systemd de WireGuard"
+#: preferenceswidget.js:205
+msgid "Nothing"
+msgstr "Nada"
 
-#~ msgid "Wireguard status"
-#~ msgstr "Estado de Wireguard"
+#: preferenceswidget.js:218
+msgid "True"
+msgstr "Cierto"
 
-#~ msgid "Enable WireGuard"
-#~ msgstr "Habilita WireGuard"
+#: preferenceswidget.js:231
+msgid "False"
+msgstr "Falso"
 
-#~ msgid "Disable WireGuard"
-#~ msgstr "Deshabilita WireGuard"
+#: preferenceswidget.js:425 preferenceswidget.js:956
+msgid "Edit"
+msgstr "Editar"
 
-#~ msgid "WireGuard Indicator"
-#~ msgstr "Indicador de WireGuard"
+#: preferenceswidget.js:472 preferenceswidget.js:490 preferenceswidget.js:519
+msgid "Name"
+msgstr "Nombre"
 
-#~ msgid "Loading..."
-#~ msgstr "Cargando"
+#: preferenceswidget.js:478 preferenceswidget.js:490 preferenceswidget.js:519
+msgid "Service"
+msgstr "Servicio"
+
+#: preferenceswidget.js:966
+msgid "Remove"
+msgstr "Borrar"
