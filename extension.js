@@ -65,18 +65,16 @@ var BatteryStatus = GObject.registerClass(
             this._loadPreferences();
 
             /* Icon indicator */
-            Gtk.IconTheme.get_default().append_search_path(
-                Extension.dir.get_child('icons').get_path());
-
             let box = new St.BoxLayout();
             this.icon = new St.Icon({style_class: 'system-status-icon'});
             box.add(this.icon);
-            this._timeLeft = new St.Label({text: 'Button',
-                                           y_expand: true,
-                                           y_align: Clutter.ActorAlign.CENTER });
+            this._timeLeft = new St.Label({
+                text: '-',
+                y_expand: true,
+                y_align: Clutter.ActorAlign.CENTER });
             box.add(this._timeLeft);
-            //box.add(PopupMenu.arrowIcon(St.Side.BOTTOM));
-            this.actor.add_child(box);
+            this.add_child(box);
+
             /* Start Menu */
             let itemBatteryCharge = this._getBatteryChargeMenuItem();
             this.menu.addMenuItem(itemBatteryCharge);
@@ -92,8 +90,6 @@ var BatteryStatus = GObject.registerClass(
                 ExtensionUtils.openPrefs();
             });
             this.menu.addMenuItem(this.settingsMenuItem);
-            /* Help */
-            this.menu.addMenuItem(this._get_help());
             /* Init */
             this._update();
             this._sourceId = 0;
@@ -343,6 +339,9 @@ var BatteryStatus = GObject.registerClass(
                             logError(e);
                         }
                     });
+                }else{
+                    this._set_icon_indicator(false);
+                    this._timeLeft.set_text("");
                 }
             } catch (e) {
                 logError(e);
@@ -355,6 +354,7 @@ var BatteryStatus = GObject.registerClass(
             let icon_string = 'battery-status-' + status_string + '-' + theme_string;
             this.icon.set_gicon(this._get_icon(icon_string));
         }
+
         _get_icon(icon_name){
             let base_icon = Extension.path + '/icons/' + icon_name;
             let file_icon = Gio.File.new_for_path(base_icon + '.png')
@@ -368,51 +368,6 @@ var BatteryStatus = GObject.registerClass(
             return icon;
         }
 
-        _create_help_menu_item(text, icon_name, url){
-            let icon = this._get_icon(icon_name);
-            let menu_item = new PopupMenu.PopupImageMenuItem(text, icon);
-            menu_item.connect('activate', () => {
-                Gio.app_info_launch_default_for_uri(url, null);
-            });
-            return menu_item;
-        }
-        _createActionButton(iconName, accessibleName){
-            let icon = new St.Button({ reactive:true,
-                                       can_focus: true,
-                                       track_hover: true,
-                                       accessible_name: accessibleName,
-                                       style_class: 'system-menu-action'});
-            icon.child = new St.Icon({icon_name: iconName });
-            return icon;
-        }
-
-        _get_help(){
-            let menu_help = new PopupMenu.PopupSubMenuMenuItem(_('Help'));
-            menu_help.menu.addMenuItem(this._create_help_menu_item(
-                _('Project Page'), 'info', 'https://github.com/atareao/battery-status/'));
-            menu_help.menu.addMenuItem(this._create_help_menu_item(
-                _('Get help online...'), 'help', 'https://www.atareao.es/aplicacion/battery-status/'));
-            menu_help.menu.addMenuItem(this._create_help_menu_item(
-                _('Report a bug...'), 'bug', 'https://github.com/atareao/battery-status/issues'));
-
-            menu_help.menu.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
-            
-            menu_help.menu.addMenuItem(this._create_help_menu_item(
-                _('El atareao'), 'atareao', 'https://www.atareao.es'));
-            menu_help.menu.addMenuItem(this._create_help_menu_item(
-                _('GitHub'), 'github', 'https://github.com/atareao'));
-            menu_help.menu.addMenuItem(this._create_help_menu_item(
-                _('Twitter'), 'twitter', 'https://twitter.com/atareao'));
-            menu_help.menu.addMenuItem(this._create_help_menu_item(
-                _('Telegram'), 'telegram', 'https://t.me/canal_atareao'));
-            menu_help.menu.addMenuItem(this._create_help_menu_item(
-                _('Mastodon'), 'mastodon', 'https://mastodon.social/@atareao'));
-            menu_help.menu.addMenuItem(this._create_help_menu_item(
-                _('Spotify'), 'spotify', 'https://open.spotify.com/show/2v0fC8PyeeUTQDD67I0mKW'));
-            menu_help.menu.addMenuItem(this._create_help_menu_item(
-                _('YouTube'), 'youtube', 'http://youtube.com/c/atareao'));
-            return menu_help;
-        }
         _settingsChanged(){
             this._loadPreferences();
 
