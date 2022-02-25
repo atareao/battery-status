@@ -4,7 +4,10 @@
   "gettext-domain": "battery-status@atareao.es",
   "name": "Battery Status",
   "settings-schema": "es.atareao.battery-status",
-  "shell-version": ["40"],
+  "shell-version": [
+    "40",
+    "41"
+  ],
   "url": "https://github.com/atareao/battery-status",
   "uuid": "battery-status@atareao.es",
   "icon": "battery-status-icon",
