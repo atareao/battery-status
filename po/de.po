@@ -1,0 +1,252 @@
+# German translation for the Battery Status GNOME Shell Extension.
+# Copyright (C) 2022 Lorenzo Carbonell
+# This file is distributed under the same license as the battery-status@atareao.es package.
+# Philipp Kiemle <philipp.kiemle@gmail.com>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: battery-status@atareao.es\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-28 10:27+0200\n"
+"PO-Revision-Date: 2022-03-28 10:22+0200\n"
+"Last-Translator: Philipp Kiemle <philipp.kiemle@gmail.com>\n"
+"Language-Team: German\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0\n"
+
+#: aboutpage.js:47
+msgid "Buy me a coffee"
+msgstr "Spendieren Sie mir einen Kaffee"
+
+#: aboutpage.js:52
+#: aboutpage.js:53
+msgid "Version"
+msgstr "Version"
+
+#: aboutpage.js:55
+msgid "GNOME Version"
+msgstr "GNOME-Version"
+
+#: aboutpage.js:56
+#: aboutpage.js:58
+msgid "OS"
+msgstr "OS"
+
+#: aboutpage.js:57
+#: aboutpage.js:60
+msgid "SessionType"
+msgstr "Sitzungstyp"
+
+#: aboutpage.js:92
+msgid "Developers"
+msgstr "Entwickler"
+
+#: aboutpage.js:99
+msgid "Contributors"
+msgstr "Mitwirkende"
+
+#: aboutpage.js:100
+msgid "Thank you to all contributors!"
+msgstr "Vielen Dank an alle Mitwirkenden!"
+
+#: aboutpage.js:101
+msgid "For a list of all contributors, please visit"
+msgstr "Für eine Liste aller Mitwirkenden, besuchen Sie bitte"
+
+#: aboutpage.js:110
+msgid "Supporters"
+msgstr "Unterstützer"
+
+#: aboutpage.js:111
+msgid "Thank you to all supporters!"
+msgstr "Vielen Dank an alle Unterstützer!"
+
+#: aboutpage.js:112
+msgid "For a list of all supporters, please visit"
+msgstr "Für eine Liste aller Unterstützer, besuchen Sie bitte"
+
+#: aboutpage.js:119
+msgid "License"
+msgstr "Lizenz"
+
+#: aboutpage.js:132
+msgid "More info"
+msgstr "Mehr Infos"
+
+#: aboutpage.js:142
+msgid "More information"
+msgstr "Weitere Informationen"
+
+#: aboutpage.js:145
+msgid "Report an issue"
+msgstr "Einen Fehler melden"
+
+#: dialogwidgets.js:55
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: dialogwidgets.js:56
+msgid "Ok"
+msgstr "OK"
+
+#: extension.js:80
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: extension.js:125
+msgid "Battery health"
+msgstr "Akkugesundheit"
+
+#: extension.js:137
+#: extension.js:138
+msgid "Current max:"
+msgstr "Aktuelle Kapazität:"
+
+#: extension.js:145
+#: extension.js:147
+msgid "Original max:"
+msgstr "Ursprüngliche Kapazität:"
+
+#: extension.js:164
+msgid "Voltage now:"
+msgstr "Aktuelle Spannung:"
+
+#: extension.js:172
+msgid "Original voltage:"
+msgstr "Ursprüngliche Spannung:"
+
+#: extension.js:188
+msgid "Battery charge"
+msgstr "Akkuladung"
+
+#: extension.js:203
+msgid "Current charge:"
+msgstr "Aktuelle Akkuladung:"
+
+#: extension.js:277 extension.js:279
+msgid "V"
+msgstr "V"
+
+#: extension.js:282 extension.js:286 extension.js:290
+msgid "mAh"
+msgstr "mAh"
+
+#: preferenceswidget.js:205
+msgid "Nothing"
+msgstr "Nichts"
+
+#: preferenceswidget.js:218
+msgid "True"
+msgstr "Wahr"
+
+#: preferenceswidget.js:231
+msgid "False"
+msgstr "Falsch"
+
+#: preferenceswidget.js:425 preferenceswidget.js:956
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: preferenceswidget.js:472 preferenceswidget.js:490 preferenceswidget.js:519
+msgid "Name"
+msgstr "Name"
+
+#: preferenceswidget.js:478 preferenceswidget.js:490 preferenceswidget.js:519
+msgid "Service"
+msgstr "Dienst"
+
+#: preferenceswidget.js:966
+msgid "Remove"
+msgstr "Entfernen"
+
+#: prefs.js:50
+msgid "Indicator options"
+msgstr "Indikator-Optionen"
+
+#: prefs.js:69 prefs.js:81 schemas/battery-status.gschema.xml:11
+msgid "Check time"
+msgstr "Überprüfungsintervall"
+
+#: prefs.js:75
+msgid "Theme"
+msgstr "Thema"
+
+#: prefs.js:78
+msgid "Battery Status Preferences"
+msgstr "Akkustatus-Einstellungen"
+
+#: prefs.js:82
+msgid "Style"
+msgstr "Stil"
+
+#: prefs.js:83
+msgid "About"
+msgstr "Info"
+
+#: prefs.js:92
+msgid "Battery Status Configuration"
+msgstr "Akkustatus-Konfiguration"
+
+#: schemas/battery-status.gschema.xml:6
+msgid "Power supply path"
+msgstr "Stromversorgung"
+
+#: schemas/battery-status.gschema.xml:7
+msgid "Path of the power supply"
+msgstr "Stromversorgung"
+
+#: schemas/battery-status.gschema.xml:12
+msgid "Set the check time to test the battery status"
+msgstr "Zeit, nach der der Akkustatus überprüft wird"
+
+#: schemas/battery-status.gschema.xml:16
+msgid "Dark theme"
+msgstr "Dunkles Thema"
+
+#: schemas/battery-status.gschema.xml:17
+msgid "Enable dark theme otherwise light theme"
+msgstr "Dunkles Thema verwenden, andernfalls helles Thema"
+
+#: schemas/battery-status.gschema.xml:21
+msgid "Normal color"
+msgstr "Normale Farbe"
+
+#: schemas/battery-status.gschema.xml:22
+msgid "Normal color for pie"
+msgstr "Normale Farbe für Diagramm"
+
+#: schemas/battery-status.gschema.xml:26
+msgid "Warning"
+msgstr "Warnung"
+
+#: schemas/battery-status.gschema.xml:27
+msgid "Show warning color when space over this value"
+msgstr "Ab diesem Wert Farbe für Warnung anzeigen"
+
+#: schemas/battery-status.gschema.xml:31
+msgid "Warning color"
+msgstr "Farbe bei Warnung"
+
+#: schemas/battery-status.gschema.xml:32
+msgid "Warning color for pie"
+msgstr "Warnung bei Gefahr für Diagramm"
+
+#: schemas/battery-status.gschema.xml:36
+msgid "Danger"
+msgstr "Gefahr"
+
+#: schemas/battery-status.gschema.xml:37
+msgid "Show danger color when space over this value"
+msgstr "Ab diesem Wert Farbe für Gefahr anzeigen"
+
+#: schemas/battery-status.gschema.xml:41
+msgid "Danger color"
+msgstr "Farbe bei Gefahr"
+
+#: schemas/battery-status.gschema.xml:42
+msgid "Danger color for pie"
+msgstr "Farbe bei Gefahr für Diagramm"
