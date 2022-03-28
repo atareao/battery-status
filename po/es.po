@@ -1,13 +1,13 @@
-# Spanish translations for WireGuard Indicator package.
-# Copyright (C) 2020 THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the WireGuard Indicator package.
+# Spanish translation for the Battery Status GNOME Shell Extension.
+# Copyright (C) 2022 Lorenzo Carbonell
+# This file is distributed under the same license as the battery-status@atareao.es package.
 # Lorenzo <atareao@atareao.es>, 2020.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: WireGuard Indicator - 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-26 06:58+0200\n"
+"POT-Creation-Date: 2022-03-04 12:50+0100\n"
 "PO-Revision-Date: 2020-09-15 19:23+0200\n"
 "Last-Translator: Lorenzo <atareao@atareao.es>\n"
 "Language-Team: Spanish\n"
@@ -16,118 +16,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
-#: schemas/battery-status.gschema.xml:6
-msgid "Power supply path"
-msgstr "Directorio de la batería"
-
-#: schemas/battery-status.gschema.xml:7
-msgid "Path of the power supply"
-msgstr "Directorio de la batería"
-
-#: schemas/battery-status.gschema.xml:11 prefs.js:69 prefs.js:81
-msgid "Check time"
-msgstr "Intervalo de comprobación"
-
-#: schemas/battery-status.gschema.xml:12
-msgid "Set the check time to test the battery status"
-msgstr "Indica el intervalo de comprobación de la batería"
-
-#: schemas/battery-status.gschema.xml:16
-msgid "Dark theme"
-msgstr "Tema oscuro"
-
-#: schemas/battery-status.gschema.xml:17
-msgid "Enable dark theme otherwise light theme"
-msgstr "Establece el tema oscuro"
-
-#: schemas/battery-status.gschema.xml:21
-msgid "Normal color"
-msgstr "Color normal"
-
-#: schemas/battery-status.gschema.xml:22
-msgid "Normal color for pie"
-msgstr "Color normal"
-
-#: schemas/battery-status.gschema.xml:26
-msgid "Warning"
-msgstr "Atención"
-
-#: schemas/battery-status.gschema.xml:27
-msgid "Show warning color when space over this value"
-msgstr "Color de atención"
-
-#: schemas/battery-status.gschema.xml:31
-msgid "Warning color"
-msgstr "Color de atención"
-
-#: schemas/battery-status.gschema.xml:32
-msgid "Warning color for pie"
-msgstr "Color de atención"
-
-#: schemas/battery-status.gschema.xml:36
-msgid "Danger"
-msgstr "Peligro"
-
-#: schemas/battery-status.gschema.xml:37
-msgid "Show danger color when space over this value"
-msgstr "Color de peligro"
-
-#: schemas/battery-status.gschema.xml:41
-msgid "Danger color"
-msgstr "Color de peligro"
-
-#: schemas/battery-status.gschema.xml:42
-msgid "Danger color for pie"
-msgstr "Color de peligro"
-
-#: extension.js:88
-msgid "Settings"
-msgstr "Configuración"
-
-#: extension.js:131
-msgid "Battery health"
-msgstr "Salud de la batería"
-
-#: extension.js:143
-msgid "Current max:"
-msgstr "Corriente máxima:"
-
-#: extension.js:151
-msgid "Original max:"
-msgstr "Corriente original:"
-
-#: extension.js:168
-msgid "Voltage now:"
-msgstr "Voltaje actual:"
-
-#: extension.js:176
-msgid "Original voltage:"
-msgstr "Voltage original"
-
-#: extension.js:192
-msgid "Battery charge"
-msgstr "Carga de la batería"
-
-#: extension.js:207
-msgid "Current charge:"
-msgstr "Carga actual:"
-
-#: extension.js:281 extension.js:283
-msgid "V"
-msgstr "V"
-
-#: extension.js:286 extension.js:290 extension.js:294
-msgid "mAh"
-msgstr "mAh"
-
-#: dialogwidgets.js:55
-msgid "Cancel"
-msgstr "Cancelar"
-
-#: dialogwidgets.js:56
-msgid "Ok"
-msgstr "Aceptar"
 
 #: aboutpage.js:47
 msgid "Buy me a coffee"
@@ -193,29 +81,53 @@ msgstr "Mas información"
 msgid "Report an issue"
 msgstr "Informa de un error..."
 
-#: prefs.js:50
-msgid "Indicator options"
-msgstr "Opciones del indicador"
+#: dialogwidgets.js:55
+msgid "Cancel"
+msgstr "Cancelar"
 
-#: prefs.js:75
-msgid "Theme"
-msgstr "Tema"
+#: dialogwidgets.js:56
+msgid "Ok"
+msgstr "Aceptar"
 
-#: prefs.js:78
-msgid "Battery Status Preferences"
-msgstr "Preferencias de Battery Status"
+#: extension.js:80
+msgid "Settings"
+msgstr "Configuración"
 
-#: prefs.js:82
-msgid "Style"
-msgstr "Estilo"
+#: extension.js:125
+msgid "Battery health"
+msgstr "Salud de la batería"
 
-#: prefs.js:83
-msgid "About"
-msgstr "Acerca de"
+#: extension.js:137
+msgid "Current max:"
+msgstr "Corriente máxima:"
 
-#: prefs.js:92
-msgid "Battery Status Configuration"
-msgstr "Configuración de Battery Status"
+#: extension.js:145
+msgid "Original max:"
+msgstr "Corriente original:"
+
+#: extension.js:162
+msgid "Voltage now:"
+msgstr "Voltaje actual:"
+
+#: extension.js:170
+msgid "Original voltage:"
+msgstr "Voltage original"
+
+#: extension.js:186
+msgid "Battery charge"
+msgstr "Carga de la batería"
+
+#: extension.js:201
+msgid "Current charge:"
+msgstr "Carga actual:"
+
+#: extension.js:275 extension.js:277
+msgid "V"
+msgstr "V"
+
+#: extension.js:280 extension.js:284 extension.js:288
+msgid "mAh"
+msgstr "mAh"
 
 #: preferenceswidget.js:205
 msgid "Nothing"
@@ -244,3 +156,91 @@ msgstr "Servicio"
 #: preferenceswidget.js:966
 msgid "Remove"
 msgstr "Borrar"
+
+#: prefs.js:50
+msgid "Indicator options"
+msgstr "Opciones del indicador"
+
+#: prefs.js:69 prefs.js:81 schemas/battery-status.gschema.xml:11
+msgid "Check time"
+msgstr "Intervalo de comprobación"
+
+#: prefs.js:75
+msgid "Theme"
+msgstr "Tema"
+
+#: prefs.js:78
+msgid "Battery Status Preferences"
+msgstr "Preferencias de Battery Status"
+
+#: prefs.js:82
+msgid "Style"
+msgstr "Estilo"
+
+#: prefs.js:83
+msgid "About"
+msgstr "Acerca de"
+
+#: prefs.js:92
+msgid "Battery Status Configuration"
+msgstr "Configuración de Battery Status"
+
+#: schemas/battery-status.gschema.xml:6
+msgid "Power supply path"
+msgstr "Directorio de la batería"
+
+#: schemas/battery-status.gschema.xml:7
+msgid "Path of the power supply"
+msgstr "Directorio de la batería"
+
+#: schemas/battery-status.gschema.xml:12
+msgid "Set the check time to test the battery status"
+msgstr "Indica el intervalo de comprobación de la batería"
+
+#: schemas/battery-status.gschema.xml:16
+msgid "Dark theme"
+msgstr "Tema oscuro"
+
+#: schemas/battery-status.gschema.xml:17
+msgid "Enable dark theme otherwise light theme"
+msgstr "Establece el tema oscuro"
+
+#: schemas/battery-status.gschema.xml:21
+msgid "Normal color"
+msgstr "Color normal"
+
+#: schemas/battery-status.gschema.xml:22
+msgid "Normal color for pie"
+msgstr "Color normal"
+
+#: schemas/battery-status.gschema.xml:26
+msgid "Warning"
+msgstr "Atención"
+
+#: schemas/battery-status.gschema.xml:27
+msgid "Show warning color when space over this value"
+msgstr "Color de atención"
+
+#: schemas/battery-status.gschema.xml:31
+msgid "Warning color"
+msgstr "Color de atención"
+
+#: schemas/battery-status.gschema.xml:32
+msgid "Warning color for pie"
+msgstr "Color de atención"
+
+#: schemas/battery-status.gschema.xml:36
+msgid "Danger"
+msgstr "Peligro"
+
+#: schemas/battery-status.gschema.xml:37
+msgid "Show danger color when space over this value"
+msgstr "Color de peligro"
+
+#: schemas/battery-status.gschema.xml:41
+msgid "Danger color"
+msgstr "Color de peligro"
+
+#: schemas/battery-status.gschema.xml:42
+msgid "Danger color for pie"
+msgstr "Color de peligro"
