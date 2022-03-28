@@ -22,7 +22,7 @@ msgstr ""
 msgid "Buy me a coffee"
 msgstr "Spendieren Sie mir einen Kaffee"
 
-#: aboutpage.js:52
+#. Translators: This string precedes the version of the extension.
 #: aboutpage.js:53
 msgid "Version"
 msgstr "Version"
@@ -31,12 +31,12 @@ msgstr "Version"
 msgid "GNOME Version"
 msgstr "GNOME-Version"
 
-#: aboutpage.js:56
+#. Translators: This string precedes the OS (Distro + version)
 #: aboutpage.js:58
 msgid "OS"
 msgstr "OS"
 
-#: aboutpage.js:57
+#. Translators: This string precedes the Session type (either "Wayland" or "X11")
 #: aboutpage.js:60
 msgid "SessionType"
 msgstr "Sitzungstyp"
@@ -101,12 +101,12 @@ msgstr "Einstellungen"
 msgid "Battery health"
 msgstr "Akkugesundheit"
 
-#: extension.js:137
+#. Translators: The current maximum battery capacity
 #: extension.js:138
 msgid "Current max:"
 msgstr "Aktuelle Kapazität:"
 
-#: extension.js:145
+#. Translators: The original maximum battery capacity
 #: extension.js:147
 msgid "Original max:"
 msgstr "Ursprüngliche Kapazität:"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: battery-status@atareao.es\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-04 12:59+0100\n"
+"POT-Creation-Date: 2022-03-28 10:27+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,63 +21,66 @@ msgstr ""
 msgid "Buy me a coffee"
 msgstr ""
 
-#: aboutpage.js:52
+#. Translators: This string precedes the version of the extension.
+#: aboutpage.js:53
 msgid "Version"
 msgstr ""
 
-#: aboutpage.js:54
+#: aboutpage.js:55
 msgid "GNOME Version"
 msgstr ""
 
-#: aboutpage.js:56
+#. Translators: This string precedes the OS (Distro + version)
+#: aboutpage.js:58
 msgid "OS"
 msgstr ""
 
-#: aboutpage.js:57
+#. Translators: This string precedes the Session type (either "Wayland" or "X11")
+#: aboutpage.js:60
 msgid "SessionType"
 msgstr ""
 
-#: aboutpage.js:89
+#: aboutpage.js:92
 msgid "Developers"
 msgstr ""
 
-#: aboutpage.js:96
+#: aboutpage.js:99
 msgid "Contributors"
 msgstr ""
 
-#: aboutpage.js:97
+#: aboutpage.js:100
 msgid "Thank you to all contributors!"
 msgstr ""
 
-#: aboutpage.js:98
+#: aboutpage.js:101
 msgid "For a list of all contributors, please visit"
 msgstr ""
 
-#: aboutpage.js:107
+#: aboutpage.js:110
 msgid "Supporters"
 msgstr ""
 
-#: aboutpage.js:108
+#: aboutpage.js:111
 msgid "Thank you to all supporters!"
 msgstr ""
 
-#: aboutpage.js:109
+#: aboutpage.js:112
 msgid "For a list of all supporters, please visit"
 msgstr ""
 
-#: aboutpage.js:116
+#: aboutpage.js:119
 msgid "License"
 msgstr ""
 
-#: aboutpage.js:129
+#: aboutpage.js:132
 msgid "More info"
 msgstr ""
 
-#: aboutpage.js:139
+#: aboutpage.js:142
 msgid "More information"
 msgstr ""
 
-#: aboutpage.js:142
+#: aboutpage.js:145
 msgid "Report an issue"
 msgstr ""
 
@@ -97,35 +100,37 @@ msgstr ""
 msgid "Battery health"
 msgstr ""
 
-#: extension.js:137
+#. Translators: The current maximum battery capacity
+#: extension.js:138
 msgid "Current max:"
 msgstr ""
 
-#: extension.js:145
+#. Translators: The original maximum battery capacity
+#: extension.js:147
 msgid "Original max:"
 msgstr ""
 
-#: extension.js:162
+#: extension.js:164
 msgid "Voltage now:"
 msgstr ""
 
-#: extension.js:170
+#: extension.js:172
 msgid "Original voltage:"
 msgstr ""
 
-#: extension.js:186
+#: extension.js:188
 msgid "Battery charge"
 msgstr ""
 
-#: extension.js:201
+#: extension.js:203
 msgid "Current charge:"
 msgstr ""
 
-#: extension.js:275 extension.js:277
+#: extension.js:277 extension.js:279
 msgid "V"
 msgstr ""
 
-#: extension.js:280 extension.js:284 extension.js:288
+#: extension.js:282 extension.js:286 extension.js:290
 msgid "mAh"
 msgstr ""
 
