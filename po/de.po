@@ -1,34 +1,35 @@
-# Spanish translation for the Battery Status GNOME Shell Extension.
+# German translation for the Battery Status GNOME Shell Extension.
 # Copyright (C) 2022 Lorenzo Carbonell
 # This file is distributed under the same license as the battery-status@atareao.es package.
-# Lorenzo <atareao@atareao.es>, 2020.
+# Philipp Kiemle <philipp.kiemle@gmail.com>, 2022.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: WireGuard Indicator - 1\n"
+"Project-Id-Version: battery-status@atareao.es\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-28 10:27+0200\n"
-"PO-Revision-Date: 2020-09-15 19:23+0200\n"
-"Last-Translator: Lorenzo <atareao@atareao.es>\n"
-"Language-Team: Spanish\n"
-"Language: es\n"
+"PO-Revision-Date: 2022-03-28 10:22+0200\n"
+"Last-Translator: Philipp Kiemle <philipp.kiemle@gmail.com>\n"
+"Language-Team: German\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0\n"
 
 #: aboutpage.js:47
 msgid "Buy me a coffee"
-msgstr "Apoya con un café"
+msgstr "Spendieren Sie mir einen Kaffee"
 
 #. Translators: This string precedes the version of the extension.
 #: aboutpage.js:53
 msgid "Version"
-msgstr "Versión"
+msgstr "Version"
 
 #: aboutpage.js:55
 msgid "GNOME Version"
-msgstr "Versión de GNOME"
+msgstr "GNOME-Version"
 
 #. Translators: This string precedes the OS (Distro + version)
 #: aboutpage.js:58
@@ -38,93 +39,93 @@ msgstr "OS"
 #. Translators: This string precedes the Session type (either "Wayland" or "X11")
 #: aboutpage.js:60
 msgid "SessionType"
-msgstr "Tipo de sesión"
+msgstr "Sitzungstyp"
 
 #: aboutpage.js:92
 msgid "Developers"
-msgstr "Desarrolladores"
+msgstr "Entwickler"
 
 #: aboutpage.js:99
 msgid "Contributors"
-msgstr "Contribuidores"
+msgstr "Mitwirkende"
 
 #: aboutpage.js:100
 msgid "Thank you to all contributors!"
-msgstr "Gracias a todos los contribuidores!"
+msgstr "Vielen Dank an alle Mitwirkenden!"
 
 #: aboutpage.js:101
 msgid "For a list of all contributors, please visit"
-msgstr "Para ver una lista de todos los contribuidores, por favor visita"
+msgstr "Für eine Liste aller Mitwirkenden, besuchen Sie bitte"
 
 #: aboutpage.js:110
 msgid "Supporters"
-msgstr "Colaboradores"
+msgstr "Unterstützer"
 
 #: aboutpage.js:111
 msgid "Thank you to all supporters!"
-msgstr "Gracias a todos los colaboradores!"
+msgstr "Vielen Dank an alle Unterstützer!"
 
 #: aboutpage.js:112
 msgid "For a list of all supporters, please visit"
-msgstr "Para ver una lista de todos los colaboradores, por favor visita"
+msgstr "Für eine Liste aller Unterstützer, besuchen Sie bitte"
 
 #: aboutpage.js:119
 msgid "License"
-msgstr "Licencia"
+msgstr "Lizenz"
 
 #: aboutpage.js:132
 msgid "More info"
-msgstr "Mas información"
+msgstr "Mehr Infos"
 
 #: aboutpage.js:142
 msgid "More information"
-msgstr "Mas información"
+msgstr "Weitere Informationen"
 
 #: aboutpage.js:145
 msgid "Report an issue"
-msgstr "Informa de un error..."
+msgstr "Einen Fehler melden"
 
 #: dialogwidgets.js:55
 msgid "Cancel"
-msgstr "Cancelar"
+msgstr "Abbrechen"
 
 #: dialogwidgets.js:56
 msgid "Ok"
-msgstr "Aceptar"
+msgstr "OK"
 
 #: extension.js:80
 msgid "Settings"
-msgstr "Configuración"
+msgstr "Einstellungen"
 
 #: extension.js:125
 msgid "Battery health"
-msgstr "Salud de la batería"
+msgstr "Akkugesundheit"
 
 #. Translators: The current maximum battery capacity
 #: extension.js:138
 msgid "Current max:"
-msgstr "Corriente máxima:"
+msgstr "Aktuelle Kapazität:"
 
 #. Translators: The original maximum battery capacity
 #: extension.js:147
 msgid "Original max:"
-msgstr "Corriente original:"
+msgstr "Ursprüngliche Kapazität:"
 
 #: extension.js:164
 msgid "Voltage now:"
-msgstr "Voltaje actual:"
+msgstr "Aktuelle Spannung:"
 
 #: extension.js:172
 msgid "Original voltage:"
-msgstr "Voltage original"
+msgstr "Ursprüngliche Spannung:"
 
 #: extension.js:188
 msgid "Battery charge"
-msgstr "Carga de la batería"
+msgstr "Akkuladung"
 
 #: extension.js:203
 msgid "Current charge:"
-msgstr "Carga actual:"
+msgstr "Aktuelle Akkuladung:"
 
 #: extension.js:277 extension.js:279
 msgid "V"
@@ -136,116 +137,116 @@ msgstr "mAh"
 
 #: preferenceswidget.js:205
 msgid "Nothing"
-msgstr "Nada"
+msgstr "Nichts"
 
 #: preferenceswidget.js:218
 msgid "True"
-msgstr "Cierto"
+msgstr "Wahr"
 
 #: preferenceswidget.js:231
 msgid "False"
-msgstr "Falso"
+msgstr "Falsch"
 
 #: preferenceswidget.js:425 preferenceswidget.js:956
 msgid "Edit"
-msgstr "Editar"
+msgstr "Bearbeiten"
 
 #: preferenceswidget.js:472 preferenceswidget.js:490 preferenceswidget.js:519
 msgid "Name"
-msgstr "Nombre"
+msgstr "Name"
 
 #: preferenceswidget.js:478 preferenceswidget.js:490 preferenceswidget.js:519
 msgid "Service"
-msgstr "Servicio"
+msgstr "Dienst"
 
 #: preferenceswidget.js:966
 msgid "Remove"
-msgstr "Borrar"
+msgstr "Entfernen"
 
 #: prefs.js:50
 msgid "Indicator options"
-msgstr "Opciones del indicador"
+msgstr "Indikator-Optionen"
 
 #: prefs.js:69 prefs.js:81 schemas/battery-status.gschema.xml:11
 msgid "Check time"
-msgstr "Intervalo de comprobación"
+msgstr "Überprüfungsintervall"
 
 #: prefs.js:75
 msgid "Theme"
-msgstr "Tema"
+msgstr "Thema"
 
 #: prefs.js:78
 msgid "Battery Status Preferences"
-msgstr "Preferencias de Battery Status"
+msgstr "Akkustatus-Einstellungen"
 
 #: prefs.js:82
 msgid "Style"
-msgstr "Estilo"
+msgstr "Stil"
 
 #: prefs.js:83
 msgid "About"
-msgstr "Acerca de"
+msgstr "Info"
 
 #: prefs.js:92
 msgid "Battery Status Configuration"
-msgstr "Configuración de Battery Status"
+msgstr "Akkustatus-Konfiguration"
 
 #: schemas/battery-status.gschema.xml:6
 msgid "Power supply path"
-msgstr "Directorio de la batería"
+msgstr "Stromversorgung"
 
 #: schemas/battery-status.gschema.xml:7
 msgid "Path of the power supply"
-msgstr "Directorio de la batería"
+msgstr "Stromversorgung"
 
 #: schemas/battery-status.gschema.xml:12
 msgid "Set the check time to test the battery status"
-msgstr "Indica el intervalo de comprobación de la batería"
+msgstr "Zeit, nach der der Akkustatus überprüft wird"
 
 #: schemas/battery-status.gschema.xml:16
 msgid "Dark theme"
-msgstr "Tema oscuro"
+msgstr "Dunkles Thema"
 
 #: schemas/battery-status.gschema.xml:17
 msgid "Enable dark theme otherwise light theme"
-msgstr "Establece el tema oscuro"
+msgstr "Dunkles Thema verwenden, andernfalls helles Thema"
 
 #: schemas/battery-status.gschema.xml:21
 msgid "Normal color"
-msgstr "Color normal"
+msgstr "Normale Farbe"
 
 #: schemas/battery-status.gschema.xml:22
 msgid "Normal color for pie"
-msgstr "Color normal"
+msgstr "Normale Farbe für Diagramm"
 
 #: schemas/battery-status.gschema.xml:26
 msgid "Warning"
-msgstr "Atención"
+msgstr "Warnung"
 
 #: schemas/battery-status.gschema.xml:27
 msgid "Show warning color when space over this value"
-msgstr "Color de atención"
+msgstr "Ab diesem Wert Farbe für Warnung anzeigen"
 
 #: schemas/battery-status.gschema.xml:31
 msgid "Warning color"
-msgstr "Color de atención"
+msgstr "Farbe bei Warnung"
 
 #: schemas/battery-status.gschema.xml:32
 msgid "Warning color for pie"
-msgstr "Color de atención"
+msgstr "Warnung bei Gefahr für Diagramm"
 
 #: schemas/battery-status.gschema.xml:36
 msgid "Danger"
-msgstr "Peligro"
+msgstr "Gefahr"
 
 #: schemas/battery-status.gschema.xml:37
 msgid "Show danger color when space over this value"
-msgstr "Color de peligro"
+msgstr "Ab diesem Wert Farbe für Gefahr anzeigen"
 
 #: schemas/battery-status.gschema.xml:41
 msgid "Danger color"
-msgstr "Color de peligro"
+msgstr "Farbe bei Gefahr"
 
 #: schemas/battery-status.gschema.xml:42
 msgid "Danger color for pie"
-msgstr "Color de peligro"
+msgstr "Farbe bei Gefahr für Diagramm"

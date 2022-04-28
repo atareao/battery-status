@@ -1,14 +1,14 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# <LANGUAGE> translation for the Battery Status GNOME Shell Extension.
+# Copyright (C) 2022 Lorenzo Carbonell
+# This file is distributed under the same license as the battery-status@atareao.es package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: battery-status@atareao.es\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-26 07:03+0200\n"
+"POT-Creation-Date: 2022-03-28 10:27+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,16 +17,185 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#: aboutpage.js:47
+msgid "Buy me a coffee"
+msgstr ""
+
+#. Translators: This string precedes the version of the extension.
+#: aboutpage.js:53
+msgid "Version"
+msgstr ""
+
+#: aboutpage.js:55
+msgid "GNOME Version"
+msgstr ""
+
+#. Translators: This string precedes the OS (Distro + version)
+#: aboutpage.js:58
+msgid "OS"
+msgstr ""
+
+#. Translators: This string precedes the Session type (either "Wayland" or "X11")
+#: aboutpage.js:60
+msgid "SessionType"
+msgstr ""
+
+#: aboutpage.js:92
+msgid "Developers"
+msgstr ""
+
+#: aboutpage.js:99
+msgid "Contributors"
+msgstr ""
+
+#: aboutpage.js:100
+msgid "Thank you to all contributors!"
+msgstr ""
+
+#: aboutpage.js:101
+msgid "For a list of all contributors, please visit"
+msgstr ""
+
+#: aboutpage.js:110
+msgid "Supporters"
+msgstr ""
+
+#: aboutpage.js:111
+msgid "Thank you to all supporters!"
+msgstr ""
+
+#: aboutpage.js:112
+msgid "For a list of all supporters, please visit"
+msgstr ""
+
+#: aboutpage.js:119
+msgid "License"
+msgstr ""
+
+#: aboutpage.js:132
+msgid "More info"
+msgstr ""
+
+#: aboutpage.js:142
+msgid "More information"
+msgstr ""
+
+#: aboutpage.js:145
+msgid "Report an issue"
+msgstr ""
+
+#: dialogwidgets.js:55
+msgid "Cancel"
+msgstr ""
+
+#: dialogwidgets.js:56
+msgid "Ok"
+msgstr ""
+
+#: extension.js:80
+msgid "Settings"
+msgstr ""
+
+#: extension.js:125
+msgid "Battery health"
+msgstr ""
+
+#. Translators: The current maximum battery capacity
+#: extension.js:138
+msgid "Current max:"
+msgstr ""
+
+#. Translators: The original maximum battery capacity
+#: extension.js:147
+msgid "Original max:"
+msgstr ""
+
+#: extension.js:164
+msgid "Voltage now:"
+msgstr ""
+
+#: extension.js:172
+msgid "Original voltage:"
+msgstr ""
+
+#: extension.js:188
+msgid "Battery charge"
+msgstr ""
+
+#: extension.js:203
+msgid "Current charge:"
+msgstr ""
+
+#: extension.js:277 extension.js:279
+msgid "V"
+msgstr ""
+
+#: extension.js:282 extension.js:286 extension.js:290
+msgid "mAh"
+msgstr ""
+
+#: preferenceswidget.js:205
+msgid "Nothing"
+msgstr ""
+
+#: preferenceswidget.js:218
+msgid "True"
+msgstr ""
+
+#: preferenceswidget.js:231
+msgid "False"
+msgstr ""
+
+#: preferenceswidget.js:425 preferenceswidget.js:956
+msgid "Edit"
+msgstr ""
+
+#: preferenceswidget.js:472 preferenceswidget.js:490 preferenceswidget.js:519
+msgid "Name"
+msgstr ""
+
+#: preferenceswidget.js:478 preferenceswidget.js:490 preferenceswidget.js:519
+msgid "Service"
+msgstr ""
+
+#: preferenceswidget.js:966
+msgid "Remove"
+msgstr ""
+
+#: prefs.js:50
+msgid "Indicator options"
+msgstr ""
+
+#: prefs.js:69 prefs.js:81 schemas/battery-status.gschema.xml:11
+msgid "Check time"
+msgstr ""
+
+#: prefs.js:75
+msgid "Theme"
+msgstr ""
+
+#: prefs.js:78
+msgid "Battery Status Preferences"
+msgstr ""
+
+#: prefs.js:82
+msgid "Style"
+msgstr ""
+
+#: prefs.js:83
+msgid "About"
+msgstr ""
+
+#: prefs.js:92
+msgid "Battery Status Configuration"
+msgstr ""
+
 #: schemas/battery-status.gschema.xml:6
 msgid "Power supply path"
 msgstr ""
 
 #: schemas/battery-status.gschema.xml:7
 msgid "Path of the power supply"
-msgstr ""
-
-#: schemas/battery-status.gschema.xml:11 prefs.js:69 prefs.js:81
-msgid "Check time"
 msgstr ""
 
 #: schemas/battery-status.gschema.xml:12
@@ -79,168 +248,4 @@ msgstr ""
 
 #: schemas/battery-status.gschema.xml:42
 msgid "Danger color for pie"
-msgstr ""
-
-#: extension.js:88
-msgid "Settings"
-msgstr ""
-
-#: extension.js:131
-msgid "Battery health"
-msgstr ""
-
-#: extension.js:143
-msgid "Current max:"
-msgstr ""
-
-#: extension.js:151
-msgid "Original max:"
-msgstr ""
-
-#: extension.js:168
-msgid "Voltage now:"
-msgstr ""
-
-#: extension.js:176
-msgid "Original voltage:"
-msgstr ""
-
-#: extension.js:192
-msgid "Battery charge"
-msgstr ""
-
-#: extension.js:207
-msgid "Current charge:"
-msgstr ""
-
-#: extension.js:281 extension.js:283
-msgid "V"
-msgstr ""
-
-#: extension.js:286 extension.js:290 extension.js:294
-msgid "mAh"
-msgstr ""
-
-#: dialogwidgets.js:55
-msgid "Cancel"
-msgstr ""
-
-#: dialogwidgets.js:56
-msgid "Ok"
-msgstr ""
-
-#: aboutpage.js:47
-msgid "Buy me a coffee"
-msgstr ""
-
-#: aboutpage.js:52
-msgid "Version"
-msgstr ""
-
-#: aboutpage.js:54
-msgid "GNOME Version"
-msgstr ""
-
-#: aboutpage.js:56
-msgid "OS"
-msgstr ""
-
-#: aboutpage.js:57
-msgid "SessionType"
-msgstr ""
-
-#: aboutpage.js:89
-msgid "Developers"
-msgstr ""
-
-#: aboutpage.js:96
-msgid "Contributors"
-msgstr ""
-
-#: aboutpage.js:97
-msgid "Thank you to all contributors!"
-msgstr ""
-
-#: aboutpage.js:98
-msgid "For a list of all contributors, please visit"
-msgstr ""
-
-#: aboutpage.js:107
-msgid "Supporters"
-msgstr ""
-
-#: aboutpage.js:108
-msgid "Thank you to all supporters!"
-msgstr ""
-
-#: aboutpage.js:109
-msgid "For a list of all supporters, please visit"
-msgstr ""
-
-#: aboutpage.js:116
-msgid "License"
-msgstr ""
-
-#: aboutpage.js:129
-msgid "More info"
-msgstr ""
-
-#: aboutpage.js:139
-msgid "More information"
-msgstr ""
-
-#: aboutpage.js:142
-msgid "Report an issue"
-msgstr ""
-
-#: prefs.js:50
-msgid "Indicator options"
-msgstr ""
-
-#: prefs.js:75
-msgid "Theme"
-msgstr ""
-
-#: prefs.js:78
-msgid "Battery Status Preferences"
-msgstr ""
-
-#: prefs.js:82
-msgid "Style"
-msgstr ""
-
-#: prefs.js:83
-msgid "About"
-msgstr ""
-
-#: prefs.js:92
-msgid "Battery Status Configuration"
-msgstr ""
-
-#: preferenceswidget.js:205
-msgid "Nothing"
-msgstr ""
-
-#: preferenceswidget.js:218
-msgid "True"
-msgstr ""
-
-#: preferenceswidget.js:231
-msgid "False"
-msgstr ""
-
-#: preferenceswidget.js:425 preferenceswidget.js:956
-msgid "Edit"
-msgstr ""
-
-#: preferenceswidget.js:472 preferenceswidget.js:490 preferenceswidget.js:519
-msgid "Name"
-msgstr ""
-
-#: preferenceswidget.js:478 preferenceswidget.js:490 preferenceswidget.js:519
-msgid "Service"
-msgstr ""
-
-#: preferenceswidget.js:966
-msgid "Remove"
 msgstr ""

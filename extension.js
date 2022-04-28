@@ -133,7 +133,8 @@ var BatteryStatus = GObject.registerClass(
                 text: '5162 mAh',
                x_expand: true,
                x_align: Clutter.ActorAlign.END });
-            batteryHealthInnerBox.add_actor(this._getRow(
+               batteryHealthInnerBox.add_actor(this._getRow(
+                // Translators: The current maximum battery capacity
                 _('Current max:'),
                 this._currentMax
             ));
@@ -141,7 +142,8 @@ var BatteryStatus = GObject.registerClass(
                 text: '5770 mAh',
                x_expand: true,
                x_align: Clutter.ActorAlign.END });
-            batteryHealthInnerBox.add_actor(this._getRow(
+               batteryHealthInnerBox.add_actor(this._getRow(
+                // Translators: The original maximum battery capacity
                 _('Original max:'),
                 this._originalMax
             ));

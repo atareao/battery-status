@@ -49,11 +49,14 @@ var AboutPage = GObject.registerClass(
 
         _getInfoFrame(){
             const info = new Widgets.Frame();
+            // Translators: This string precedes the version of the extension.
             info.addLabelRow(Extension.metadata.name + " " + _('Version'),
                              Extension.metadata.version.toString());
             info.addLabelRow(_("GNOME Version"),
                              imports.misc.config.PACKAGE_VERSION.toString());
+            // Translators: This string precedes the OS (Distro + version)
             info.addLabelRow(_("OS"), this._getOS());
+            // Translators: This string precedes the Session type (either "Wayland" or "X11")
             info.addLabelRow(_("SessionType"), this._getSessionType());
             return info;
         }
