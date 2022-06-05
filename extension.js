@@ -32,7 +32,6 @@ const PopupMenu = imports.ui.popupMenu;
 
 const ExtensionUtils = imports.misc.extensionUtils;
 const Extension = ExtensionUtils.getCurrentExtension();
-const Convenience = Extension.imports.convenience;
 const PieChart = Extension.imports.piechart.PieChart;
 
 const Gettext = imports.gettext.domain(Extension.uuid);
@@ -53,7 +52,7 @@ var BatteryStatus = GObject.registerClass(
     class BatteryStatus extends PanelMenu.Button{
         _init(){
             super._init(St.Align.START);
-            this._settings = Convenience.getSettings();
+            this._settings = ExtensionUtils.getSettings();
             this._loadPreferences();
 
             /* Icon indicator */
@@ -70,7 +69,7 @@ var BatteryStatus = GObject.registerClass(
             /* Start Menu */
             let itemBatteryCharge = this._getBatteryChargeMenuItem();
             this.menu.addMenuItem(itemBatteryCharge);
-            
+
             let itemBatteryHealth = this._getBatteryHealthMenuItem();
             this.menu.addMenuItem(itemBatteryHealth);
 
@@ -227,7 +226,7 @@ var BatteryStatus = GObject.registerClass(
         }
 
         _getValue(keyName){
-            this._settings = Convenience.getSettings();
+            this._settings = ExtensionUtils.getSettings();
             return this._settings.get_value(keyName).deep_unpack();
         }
 
@@ -407,7 +406,7 @@ var BatteryStatus = GObject.registerClass(
 let batteryStatus;
 
 function init(){
-    Convenience.initTranslations();
+    ExtensionUtils.initTranslations();
 }
 
 function enable(){
@@ -418,4 +417,5 @@ function enable(){
 function disable() {
     batteryStatus.disableUpdate();
     batteryStatus.destroy();
+    batteryStatus = null;
 }

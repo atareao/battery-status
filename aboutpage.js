@@ -35,7 +35,7 @@ var AboutPage = GObject.registerClass(
     class AboutPage extends Widgets.Page{
         _init(){
             super._init();
-            this.addLocalImage(Extension.metadata.icon, 100);
+            this.addLocalImage(Extension.metadata.icon, 80);
             const appName = Extension.metadata.name;
             this.addLabel(`<span size="large"><b>${appName}</b></span>`);
             this.addLabel(Extension.metadata.description);
@@ -63,8 +63,8 @@ var AboutPage = GObject.registerClass(
         _getInfoNotebook(){
             const infoScrolledWindow = new Gtk.ScrolledWindow({
                 marginTop: 10,
-                maxContentHeight: 250,
-                minContentHeight: 250,
+                maxContentHeight: 200,
+                minContentHeight: 200,
                 vexpand: false,
             });
             const notebook = new Widgets.Notebook();
@@ -138,7 +138,7 @@ IN THE SOFTWARE
             });
             const ghurl = Extension.metadata.description;
             const ghissue = `${ghurl}/issues`;
-            
+
             const moreinfo = _("More information");
             page.appendImageWithLabel(
                 "info", 24, `<a href="${ghurl}">${moreinfo}</a>`);
@@ -147,19 +147,19 @@ IN THE SOFTWARE
                 "bug", 24, `<a href="${ghissue}">${issue}</a>`);
 
             box.append(this._getLinkButton(
-                "youtube", 48, "https://atareao.es/youtube", "YouTube"));
+                "youtube", 24, "https://atareao.es/youtube", "YouTube"));
             box.append(this._getLinkButton(
-                "spotify", 48, "https://atareao.es/spotify", "Spotify"));
+                "spotify", 24, "https://atareao.es/spotify", "Spotify"));
             box.append(this._getLinkButton(
-                "github", 48, "https://atareao.es/github", "GitHub"));
+                "github", 24, "https://atareao.es/github", "GitHub"));
             box.append(this._getLinkButton(
-                "twitter", 48, "https://atareao.es/twitter", "Twitter"));
+                "twitter", 24, "https://atareao.es/twitter", "Twitter"));
             box.append(this._getLinkButton(
-                "mastodon", 48, "https://atareao.es/mastodon", "Mastodon"));
+                "mastodon", 24, "https://atareao.es/mastodon", "Mastodon"));
             box.append(this._getLinkButton(
-                "telegram", 48, "https://atareao.es/telegram", "Telegram"));
+                "telegram", 24, "https://atareao.es/telegram", "Telegram"));
             box.append(this._getLinkButton(
-                "atareao", 48, "https://atareao.es", "atareao.es"));
+                "atareao", 24, "https://atareao.es", "atareao.es"));
             page.append(box);
             return page;
         }
