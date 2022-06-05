@@ -6,10 +6,11 @@
   "settings-schema": "es.atareao.battery-status",
   "shell-version": [
     "40",
-    "41"
+    "41",
+    "42"
   ],
   "url": "https://github.com/atareao/battery-status",
   "uuid": "battery-status@atareao.es",
   "icon": "battery-status-icon",
-  "version": 5
+  "version": 6
 }
