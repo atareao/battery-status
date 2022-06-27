@@ -672,7 +672,7 @@ var OtherSetting = GObject.registerClass(
 );
 
 /**
- * Convenience classes for widgets similar to Gnome Control Center
+ * Interesting classes for widgets similar to Gnome Control Center
  */
 var Row = GObject.registerClass(
     {
@@ -1388,14 +1388,14 @@ var StackListBox = GObject.registerClass(
                 marginTop: 12,
                 marginBottom: 12,
                 marginStart: 12,
-                marginEnd: 12, 
+                marginEnd: 12,
                 column_spacing: 10
             });
             row1.set_child(row);
             row1.stackName = name;
             row1.translateableName = translateableName;
-            
-            let image = new Gtk.Image({ 
+
+            let image = new Gtk.Image({
                 icon_name: iconName
             });
 
@@ -1408,7 +1408,7 @@ var StackListBox = GObject.registerClass(
 
             if(nextPage){
                 row1.nextPage = nextPage;
-                let image2 = new Gtk.Image({ 
+                let image2 = new Gtk.Image({
                     gicon: Gio.icon_new_for_string('go-next-symbolic'),
                     halign: Gtk.Align.END,
                     hexpand: true
@@ -1424,7 +1424,7 @@ var StackListBox = GObject.registerClass(
                         let sep = Gtk.Separator.new(Gtk.Orientation.HORIZONTAL);
                         sep.show();
                         _row.set_header(sep);
-                        
+
                     }
                 }
             });

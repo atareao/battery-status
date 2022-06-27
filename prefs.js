@@ -24,8 +24,8 @@
 
 const {GLib, GObject, Gio, Gtk, Gdk} = imports.gi;
 
-const Extension = imports.misc.extensionUtils.getCurrentExtension();
-const Convenience = Extension.imports.convenience;
+const ExtensionUtils = imports.misc.extensionUtils;
+const Extension = ExtensionUtils.getCurrentExtension();
 const Widgets = Extension.imports.preferenceswidget;
 const AboutPage = Extension.imports.aboutpage.AboutPage;
 const Gettext = imports.gettext.domain(Extension.uuid);
@@ -34,7 +34,7 @@ const _ = Gettext.gettext;
 const DialogWidgets = Extension.imports.dialogwidgets;
 
 function init() {
-    Convenience.initTranslations();
+    ExtensionUtils.initTranslations();
 }
 
 var BatteryStatusPreferencesWidget = GObject.registerClass(
@@ -44,8 +44,8 @@ var BatteryStatusPreferencesWidget = GObject.registerClass(
 
             let preferencesPage = new Widgets.Page();
 
-            var settings = Convenience.getSettings();
-            
+            var settings = ExtensionUtils.getSettings();
+
             let indicatorSection = preferencesPage.addFrame(
                 _("Indicator options"));
             indicatorSection.addGSetting(settings, "path");
