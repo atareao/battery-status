@@ -45,7 +45,7 @@ You need GNOME Shell
 
 To install <span id="project_title">Battery Status</span>, follow these steps:
 
-Goto [GNOME Extensions page](https://extensions.gnome.org/) and search for WireGuard Indicator.
+Goto [GNOME Extensions page](https://extensions.gnome.org/) and search for [Battery Status](https://extensions.gnome.org/extension/3763/battery-status/).
 
 Enable the extension by click the switch.
 
